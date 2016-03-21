@@ -1,8 +1,8 @@
-* General purpose
+* Purpose
 There is a lot of knowledge of advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
-* Discussion topics of the top of my mind
+* Potential discussion topics
 ** Making R-packages
   + Documentation :: Roxygen, Rmarkdown
   + Testing :: testthat, assertthat, r-travis
@@ -17,13 +17,14 @@ this could be done without creating too much extra work.
       + https://cartesianfaith.files.wordpress.com/2015/05/rowe-modeling-data-with-functional-programming-chs1-4.pdf
     + Closures
       + http://adv-r.had.co.nz/Functional-programming.html
-    + Currying: https://gist.github.com/natalinobusa/7747871
+    + Currying
+      + https://gist.github.com/natalinobusa/7747871
     + Tail recursion
     + Lambda-functions
-      http://stackoverflow.com/questions/7833173/lambda-like-functions-in-r
+      + http://stackoverflow.com/questions/7833173/lambda-like-functions-in-r
     + Macros
-      http://www.r-bloggers.com/macros-in-r/
-      Programmer’s Niche: Macros in R: https://www.r-project.org/doc/Rnews/Rnews_2001-3.pdf
+      + http://www.r-bloggers.com/macros-in-r/
+      + Programmer’s Niche: Macros in R: https://www.r-project.org/doc/Rnews/Rnews_2001-3.pdf
     + Monads and Gonads?
     + Functors?
 ** Operators
@@ -31,15 +32,19 @@ this could be done without creating too much extra work.
 ** Extending R
   + Rcpp
   + Plotting with js: rChars, ggvis & htmlwidgets
+** Hosting R
++ shiny
++ opencpu
++ rocker
++ Rstudio-server
 ** Speeding up R
   + Multi-core :: parallel, foreach, snow
   + Multi-node :: Rmpi, RHadoop
   + Compiled R code
-    http://www.rinfinance.com/agenda/2014/talk/LukeTierney.pdf
+    + http://www.rinfinance.com/agenda/2014/talk/LukeTierney.pdf
 * Read/discuss books or articles
 + R cookbook
 + http://adv-r.had.co.nz/
-+ other?
 * Other discussions
 + Introduce R to new users within MEB
 + Host Stockholm R useR (SRUG) group meetup at MEB

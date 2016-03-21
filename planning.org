@@ -1,4 +1,4 @@
-* General thoughts on an advanced R study group
+* General purpose
 There is a lot of knowledge of advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
@@ -6,15 +6,17 @@ this could be done without creating too much extra work.
 ** Making R-packages
   + Documentation :: Roxygen, Rmarkdown
   + Testing :: testthat, assertthat, r-travis
- Data Management
-  + dplyr, data.table, sqldf vs base
+** Data Management
+  + dplyr, data.table, sqldf and base
 ** General coding schemes
 *** R classes and object oriented coding in R
     + http://www.cyclismo.org/tutorial/R/s3Classes.html
 *** Functional coding in R
-    + Functional-package: https://cran.r-project.org/web/packages/functional/functional.pdf
-      + https://cartesianfaith.com/2015/05/30/chapter-4-of-modeling-data-with-functional-programming-in-r-is-out/
+    + Functional-packages
+      + https://cran.r-project.org/web/packages/functional/functional.pdf
+      + https://cartesianfaith.files.wordpress.com/2015/05/rowe-modeling-data-with-functional-programming-chs1-4.pdf
     + Closures
+      + http://adv-r.had.co.nz/Functional-programming.html
     + Currying: https://gist.github.com/natalinobusa/7747871
     + Tail recursion
     + Lambda-functions
@@ -25,12 +27,12 @@ this could be done without creating too much extra work.
     + Monads and Gonads?
     + Functors?
 ** Operators
-  https://cran.r-project.org/web/packages/operators/operators.pdf
++ https://cran.r-project.org/web/packages/operators/operators.pdf
 ** Extending R
   + Rcpp
-  + js-plots :: rChars, ggvis & htmlwidgets
+  + Plotting with js: rChars, ggvis & htmlwidgets
 ** Speeding up R
-  + Multi-core :: parallel, foreach
+  + Multi-core :: parallel, foreach, snow
   + Multi-node :: Rmpi, RHadoop
   + Compiled R code
     http://www.rinfinance.com/agenda/2014/talk/LukeTierney.pdf

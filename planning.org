@@ -40,8 +40,14 @@ this could be done without creating too much extra work.
 ** Speeding up R
   + Multi-core :: parallel, foreach, snow
   + Multi-node :: Rmpi, RHadoop
-  + Compiled R code
+  + Compiled R code ::
     + http://www.rinfinance.com/agenda/2014/talk/LukeTierney.pdf
+** Simulation
++ for evaluating sampling techniques
++ comparing estimates from various methods
+*** Reporting simulation results
++ Graph and table designs
+** Bootstrapping
 * Read/discuss books or articles
 + R cookbook
 + http://adv-r.had.co.nz/

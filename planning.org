@@ -4,7 +4,7 @@ would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
 * Meeting <2016-03-31 Thu>
 ** Attendees
-Xingrong, Elisabeth, Andreas, Nathalie, Henrik, Arvid, Peter, Mark and Alex
+Xingrong, Elisabeth, Andreas, Nathalie, Henric, Arvid, Peter, Mark and Alex
 ** Decisions
 + The meeting will take place every three weeks.
 + The meeting format will be casual with one person presenting
@@ -27,7 +27,7 @@ The assigned names here are only _preliminary_.
 Roxygen, Rmarkdown
 *** Testing
 testthat, assertthat, r-travis
-** Permutation test                                                 :Henrik:
+** Permutation test                                                 :Henric:
 + coin package
 ** Data analysis                                                       :Alex:
 + Hmisc, multcomp, car
@@ -43,12 +43,12 @@ testthat, assertthat, r-travis
 *** JS                                                      :Andreas:Tobba:
 rCharts, plotly, ggvis & htmlwidgets
 ** Speeding up R
-*** Multi-core                                                     :Henrik:
+*** Multi-core                                                     :Henric:
 + parallel, foreach, snow
 + openmp?
 *** Multi-node
 + Rmpi, RHadoop
-*** Compiled R code                                                :Henrik:
+*** Compiled R code                                                :Henric:
 ** Plotting
 *** ggplot2                                                        :Robert:
 More advanced version of Roberts student seminar
@@ -56,11 +56,11 @@ More advanced version of Roberts student seminar
 + dplyr, data.table, sqldf and base
 + DB queries from R
 ** General coding schemes
-*** R classes and object oriented coding in R                 :Alex:Henrik:
+*** R classes and object oriented coding in R                 :Alex:Henric:
 + Classes inheritance
 + S3, Alex
   http://www.cyclismo.org/tutorial/R/s3Classes.html
-+ S4, Henrik
++ S4, Henric
 + Operators?
 *** Functional coding in R                                           :Mark:
     + Functional-packages

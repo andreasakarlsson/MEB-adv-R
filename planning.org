@@ -14,9 +14,12 @@ Xingrong, Elisabeth, Andreas, Nathalie, Henrik, Arvid, Peter, Mark and Alex
 * Planned presentations
 ** Robust variance                                                   :Arvid:
 <2016-04-21 Thu 10:30-11:30>
-+ n.b. Tomtebodavägen 18A, Room:Marie
++ Presenter: Arvid
++ N.b. Tomtebodavägen 18A, Room: Marie
 ** Weights in GLMs                                                 :Nathalie:
 <2016-05-12 Thu 10:30-11:30>
++ Presenter: Nathalie
++ Wargentin
 * Potential topics pool
 The assigned names here are only _preliminary_.
 ** Making R-packages
@@ -32,6 +35,7 @@ testthat, assertthat, r-travis
 ** Work flow                                                           :Alex:
 + literate programming
 ** Splines                                                        :Xingrong:
++ Xingrong
 ** Extending R
 *** Rcpp                                                             :Mark:
 + Rcpp
@@ -47,10 +51,10 @@ rCharts, plotly, ggvis & htmlwidgets
 *** Compiled R code                                                :Henrik:
 ** Plotting
 *** ggplot2                                                        :Robert:
-More advanced version of his student seminar
-** Data Management
+More advanced version of Roberts student seminar
+** Data Management                                                 :Andreas:
 + dplyr, data.table, sqldf and base
-+ db queries from R
++ DB queries from R
 ** General coding schemes
 *** R classes and object oriented coding in R                 :Alex:Henrik:
 + Classes inheritance

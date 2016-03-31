@@ -1,44 +1,37 @@
 * Purpose
-There is a lot of knowledge of advanced usage of R within MEB. It
+There is a lot of knowledge and advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
 * Meeting <2016-03-31 Thu>
 ** Attendees
 Xingrong, Elisabeth, Andreas, Nathalie, Henrik, Arvid, Peter, Mark and Alex
 ** Decisions
-+ The meeting will take part every three weeks
++ The meeting will take place every three weeks.
 + The meeting format will be casual with one person presenting
   (inspired by the applied biostat group).
-+ There was also discussions on a reading group with interest in the
-  Advanced R book http://adv-r.had.co.nz/.
++ There were also discussions regarding a reading group with particular
+  interest in the Advanced R book http://adv-r.had.co.nz/.
 * Planned presentations
 ** Robust variance                                                   :Arvid:
 <2016-04-21 Thu 10:30-11:30>
-n.b. Tomtebodavägen 18A, Room:Marie
++ n.b. Tomtebodavägen 18A, Room:Marie
 ** Weights in GLMs                                                 :Nathalie:
 <2016-05-12 Thu 10:30-11:30>
-* Potential topics
-The assigned names here are _preliminary_.
-** TODO Robust variances                                             :Arvid:
-+ sandwich
-** TODO Weights in GLM                                            :Nathalie:
-+ survey-package
-** Splines                                                        :Xingrong:
-** Permutation test                                                 :Henrik:
-+ coin package
-** GAMS
-** Imputation
-** R and version control
+* Potential topics pool
+The assigned names here are only _preliminary_.
 ** Making R-packages
 *** Documentation
 Roxygen, Rmarkdown
 *** Testing
 testthat, assertthat, r-travis
+** Permutation test                                                 :Henrik:
++ coin package
 ** Data analysis                                                       :Alex:
 + Hmisc, multcomp, car
 + non-linear contrasts, car??
 ** Work flow                                                           :Alex:
 + literate programming
+** Splines                                                        :Xingrong:
 ** Extending R
 *** Rcpp                                                             :Mark:
 + Rcpp
@@ -84,16 +77,20 @@ More advanced version of his student seminar
 ** Hosting R processes                                             :Andreas:
 + shiny
 + opencpu
-*** related topics
+*** Server misc
 + rocker
 + Rstudio-server
 ** Simulation
 + for evaluating sampling techniques
 + comparing estimates from various methods
-https://www.jstatsoft.org/article/view/v069i04
++ https://www.jstatsoft.org/article/view/v069i04
+*** Bootstrapping
 *** Reporting simulation results
 + Graph and table designs
-** Bootstrapping
+** Misc
++ GAMS
++ Imputation
++ R and version control
 * Read/discuss books or articles
 + http://adv-r.had.co.nz/
 + R cookbook

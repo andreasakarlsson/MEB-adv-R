@@ -2,16 +2,70 @@
 There is a lot of knowledge of advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
-* Potential discussion topics
+* Meeting <2016-03-31 Thu>
+** Attendees
+Xingrong, Elisabeth, Andreas, Nathalie, Henrik, Arvid, Peter, Mark and Alex
+** Decisions
++ The meeting will take part every three weeks
++ The meeting format will be casual with one person presenting
+  (inspired by the applied biostat group).
++ There was also discussions on a reading group with interest in the
+  Advanced R book http://adv-r.had.co.nz/.
+* Planned presentations
+** Robust variance                                                   :Arvid:
+<2016-04-21 Thu 10:30-11:30>
+n.b. Tomtebodavägen 18A, Room:Marie
+** Weights in GLMs                                                 :Nathalie:
+<2016-05-12 Thu 10:30-11:30>
+* Potential topics
+The assigned names here are _preliminary_.
+** TODO Robust variances                                             :Arvid:
++ sandwich
+** TODO Weights in GLM                                            :Nathalie:
++ survey-package
+** Splines                                                        :Xingrong:
+** Permutation test                                                 :Henrik:
++ coin package
+** GAMS
+** Imputation
+** R and version control
 ** Making R-packages
-  + Documentation :: Roxygen, Rmarkdown
-  + Testing :: testthat, assertthat, r-travis
+*** Documentation
+Roxygen, Rmarkdown
+*** Testing
+testthat, assertthat, r-travis
+** Data analysis                                                       :Alex:
++ Hmisc, multcomp, car
++ non-linear contrasts, car??
+** Work flow                                                           :Alex:
++ literate programming
+** Extending R
+*** Rcpp                                                             :Mark:
++ Rcpp
++ Armadillo
+*** JS                                                      :Andreas:Tobba:
+rCharts, plotly, ggvis & htmlwidgets
+** Speeding up R
+*** Multi-core                                                     :Henrik:
++ parallel, foreach, snow
++ openmp?
+*** Multi-node
++ Rmpi, RHadoop
+*** Compiled R code                                                :Henrik:
+** Plotting
+*** ggplot2                                                        :Robert:
+More advanced version of his student seminar
 ** Data Management
-  + dplyr, data.table, sqldf and base
++ dplyr, data.table, sqldf and base
++ db queries from R
 ** General coding schemes
-*** R classes and object oriented coding in R
-    + http://www.cyclismo.org/tutorial/R/s3Classes.html
-*** Functional coding in R
+*** R classes and object oriented coding in R                 :Alex:Henrik:
++ Classes inheritance
++ S3, Alex
+  http://www.cyclismo.org/tutorial/R/s3Classes.html
++ S4, Henrik
++ Operators?
+*** Functional coding in R                                           :Mark:
     + Functional-packages
       + https://cran.r-project.org/web/packages/functional/functional.pdf
       + https://cartesianfaith.files.wordpress.com/2015/05/rowe-modeling-data-with-functional-programming-chs1-4.pdf
@@ -27,31 +81,24 @@ this could be done without creating too much extra work.
       + Programmer’s Niche: Macros in R: https://www.r-project.org/doc/Rnews/Rnews_2001-3.pdf
     + Monads and Gonads?
     + Functors?
-** Operators
-+ https://cran.r-project.org/web/packages/operators/operators.pdf
-** Extending R
-  + Rcpp
-  + Plotting with js: rChars, ggvis & htmlwidgets
-** Hosting R
+** Hosting R processes                                             :Andreas:
 + shiny
 + opencpu
+*** related topics
 + rocker
 + Rstudio-server
-** Speeding up R
-  + Multi-core :: parallel, foreach, snow
-  + Multi-node :: Rmpi, RHadoop
-  + Compiled R code ::
-    + http://www.rinfinance.com/agenda/2014/talk/LukeTierney.pdf
 ** Simulation
 + for evaluating sampling techniques
 + comparing estimates from various methods
+https://www.jstatsoft.org/article/view/v069i04
 *** Reporting simulation results
 + Graph and table designs
 ** Bootstrapping
 * Read/discuss books or articles
-+ R cookbook
 + http://adv-r.had.co.nz/
++ R cookbook
 * Other discussions
 + Introduce R to new users within MEB
++ Offer courses in R
 + Host Stockholm R useR (SRUG) group meetup at MEB
 + Reuse some study-group material for SRUG presentation

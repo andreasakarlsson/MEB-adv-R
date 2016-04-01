@@ -24,9 +24,27 @@ Xingrong, Elisabeth, Andreas, Nathalie, Henric, Arvid, Peter, Mark and Alex
 The assigned names here are only _preliminary_.
 ** Making R-packages
 *** Documentation
-Roxygen, Rmarkdown
++ Roxygen
++ Rmarkdown
 *** Testing
-testthat, assertthat, r-travis
++ testthat
++ assertthat
++ r-travis
+*** Debugging                                                      :Henric:
++ traceback
++ debug
++ browser
++ trace
++ recover
+[[http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf]]
+**** Rcpp
++ Valgrind
+*** Profiling                                                      :Henric:
++ Rprof
++ lineprof
++ microbenchmark
+**** Rcpp
++ Valgrind
 ** Permutation test                                                 :Henric:
 + coin package
 ** Data analysis                                                       :Alex:

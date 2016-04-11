@@ -67,6 +67,8 @@ rCharts, plotly, ggvis & htmlwidgets
 *** Multi-node
 + Rmpi, RHadoop
 *** Compiled R code                                                :Henric:
+Compiling R code using LLVM by Duncan Temple Lang:
+http://projecteuclid.org/download/pdfview_1/euclid.ss/1408368570
 ** Plotting
 *** ggplot2                                                        :Robert:
 More advanced version of Roberts student seminar
@@ -74,6 +76,13 @@ More advanced version of Roberts student seminar
 + dplyr, data.table, sqldf and base
 + DB queries from R
 ** General coding schemes
+The distinction between *functional* OOP, as in S3 and S4, and
+Java/C++-style *encapsulated* OOP, as in Reference Classes and
+R6. Here’s a link to nice paper by John Chambers
+http://projecteuclid.org/download/pdfview_1/euclid.ss/1408368569
+discussing these issues. For more on this, the paper has now grown
+into a book that’ll be published later this year:
+https://www.crcpress.com/Extending-R/Chambers/9781498775717
 *** R classes and object oriented coding in R                 :Alex:Henric:
 + Classes inheritance
 + S3, Alex

@@ -1,33 +1,55 @@
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+# -*- mode: org; -*-
 
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
-#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
 
-#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+#+HTML_HEAD: <script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+# #+HTML_HEAD: <script> var HS_STARTUP_FOLDED = true; </script>
+
+# Settings https://github.com/fniessen/refcard-org-mode
+
+#+TITLE:     MEB Advanced R group
+#+AUTHOR:    Andreas Karlsson
+
+#+DESCRIPTION: Study group for R users at MEB
+#+KEYWORDS:  R, statistics, biostatistics, epidemiology
+#+LANGUAGE:  en
+
 * Purpose
 There is a lot of knowledge and advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
-* Meeting <2016-03-31 Thu>
-** Attendees
+* Meetings & presentations
+** TODO R environments                                               :Johan:
+<2016-05-12 Thu 10:30-11:30>
++ Presenter: Johan
++ Location: Wargentin
++ Recommended reading before meeting: [[http://adv-r.had.co.nz/Environments.html]]
+** DONE Robust variance                                              :Arvid:
+<2016-04-21 Thu 10:30-11:30>
++ Presenter: Arvid
++ Presentation: [[file:presentations/sandwich.pdf][The sandwich formula]]
+#+begin_caution
++ Location: Tomtebodavägen 18A, Room: Marie
+#+end_caution
+** DONE Meetings  <2016-03-31 Thu>
+*** Attendees
 Xingrong, Elisabeth, Andreas, Nathalie, Henric, Arvid, Peter, Mark and Alex
-** Decisions
+*** Decisions
 + The meeting will take place every three weeks.
 + The meeting format will be casual with one person presenting
   (inspired by the applied biostat group).
 + There were also discussions regarding a reading group with particular
   interest in the Advanced R book http://adv-r.had.co.nz/.
-* Planned presentations
-** Robust variance                                                   :Arvid:
-<2016-04-21 Thu 10:30-11:30>
-+ Presenter: Arvid
-+ N.b. Tomtebodavägen 18A, Room: Marie
-** Weights in GLMs                                                 :Nathalie:
-<2016-05-12 Thu 10:30-11:30>
-+ Presenter: Nathalie
-+ Wargentin
 * Potential topics pool
 The assigned names here are only _preliminary_.
 ** Making R-packages
@@ -126,14 +148,22 @@ https://www.crcpress.com/Extending-R/Chambers/9781498775717
 *** Bootstrapping
 *** Reporting simulation results
 + Graph and table designs
+** Machine Learning
++ Caret package: https://topepo.github.io/caret/index.html
++ Interview with Max Kuhn:
+  http://machinelearningmastery.com/caret-r-package-for-applied-predictive-modeling/
++ Applied Predictive Modeling book:
+  http://appliedpredictivemodeling.com/
+
 ** Misc
 + GAMS
 + Imputation
 + R and version control
-* Read/discuss books or articles
+* Read & discuss
 + http://adv-r.had.co.nz/
-+ R cookbook
-* Other discussions
++ *R cookbook*
++ *Applied Predictive Modeling* by Max Kuhn and Kjell Johnson
+* Other activities
 + Introduce R to new users within MEB
 + Offer courses in R
 + Host Stockholm R useR (SRUG) group meetup at MEB

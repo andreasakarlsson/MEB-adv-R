@@ -148,12 +148,14 @@ https://www.crcpress.com/Extending-R/Chambers/9781498775717
 *** Bootstrapping
 *** Reporting simulation results
 + Graph and table designs
-** Machine Learning
+** Predictive modelling                                              :Peter:
++ Applied Predictive Modeling book:
+  http://appliedpredictivemodeling.com/
+*** Machine Learning
 + Caret package: https://topepo.github.io/caret/index.html
 + Interview with Max Kuhn:
   http://machinelearningmastery.com/caret-r-package-for-applied-predictive-modeling/
-+ Applied Predictive Modeling book:
-  http://appliedpredictivemodeling.com/
+
 
 ** Misc
 + GAMS

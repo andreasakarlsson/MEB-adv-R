@@ -37,7 +37,7 @@ this could be done without creating too much extra work.
 ** DONE Robust variance                                              :Arvid:
 <2016-04-21 Thu 10:30-11:30>
 + Presenter: Arvid
-+ Presentation: [[file:presentations/sandwich.pdf][The sandwich formula]]
++ Presentation: [[file:presentations/sandwich.pdf][The sandwich formula in =R=]]
 #+begin_caution
 + Location: Tomtebodavägen 18A, Room: Marie
 #+end_caution

@@ -29,7 +29,12 @@ There is a lot of knowledge and advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
 * Meetings & presentations
-** TODO R environments                                               :Johan:
+** TODO Reading: *Advanced R* by Hadley Wickham                        :all:
+<2016-05-31 Tue 09:00-11:00>
++ Reading group on: [[http://adv-r.had.co.nz/Introduction.html]]
++ Read & do exercises of *foundations* chapter before meeting
++ Location: N2
+** DONE R environments                                               :Johan:
 <2016-05-12 Thu 10:30-11:30>
 + Presenter: Johan
 + Location: Wargentin

@@ -39,6 +39,7 @@ this could be done without creating too much extra work.
 + Presenter: Johan
 + Location: Wargentin
 + Recommended reading before meeting: [[http://adv-r.had.co.nz/Environments.html]]
++ Materials: [[file:presentations/R-env.pdf][slides]], [[file:presentations/R-env.R][R-code]]
 ** DONE Robust variance                                              :Arvid:
 <2016-04-21 Thu 10:30-11:30>
 + Presenter: Arvid

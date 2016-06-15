@@ -29,7 +29,7 @@ There is a lot of knowledge and advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
 * Meetings & presentations
-** TODO Reading: *Advanced R* - subsetting chapter                     :all:
+** TODO Reading: *Advanced R* - subsetting                              :all:
 <2016-06-21 Tue 13:00-14:00>
 + Reading group on: [[http://adv-r.had.co.nz/Subsetting.html]]
 + Read & do exercises of *subsetting* chapter before meeting
@@ -44,6 +44,7 @@ this could be done without creating too much extra work.
 + Presenter: Johan
 + Location: Wargentin
 + Recommended reading before meeting: [[http://adv-r.had.co.nz/Environments.html]]
++ Materials: [[file:presentations/R-env.pdf][slides]], [[file:presentations/R-env.R][R-code]]
 ** DONE Robust variance                                              :Arvid:
 <2016-04-21 Thu 10:30-11:30>
 + Presenter: Arvid

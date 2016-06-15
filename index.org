@@ -29,10 +29,15 @@ There is a lot of knowledge and advanced usage of R within MEB. It
 would be nice to be able to share some of that knowledge. Preferably
 this could be done without creating too much extra work.
 * Meetings & presentations
-** TODO Reading: *Advanced R* by Hadley Wickham                        :all:
+** TODO Reading: *Advanced R* - subsetting chapter                     :all:
+<2016-06-21 Tue 13:00-14:00>
++ Reading group on: [[http://adv-r.had.co.nz/Subsetting.html]]
++ Read & do exercises of *subsetting* chapter before meeting
++ Location: N2
+** DONE Reading: *Advanced R* - data structures                        :all:
 <2016-05-31 Tue 09:00-11:00>
-+ Reading group on: [[http://adv-r.had.co.nz/Introduction.html]]
-+ Read & do exercises of *foundations* chapter before meeting
++ Reading group on: [[http://adv-r.had.co.nz/Introduction.html]] by Hadley Wickham
++ Read & do exercises of +foundations+ *data structures* chapter before meeting
 + Location: N2
 ** DONE R environments                                               :Johan:
 <2016-05-12 Thu 10:30-11:30>

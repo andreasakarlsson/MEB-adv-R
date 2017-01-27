@@ -3,15 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2016-06-15 Wed 13:25 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<!-- 2017-01-27 fre 14:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MEB Advanced R group</title>
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Andreas Karlsson" />
-<meta  name="description" content="Study group for R users at MEB"
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Andreas Karlsson" />
+<meta name="description" content="Study group for R users at MEB"
  />
-<meta  name="keywords" content="R, statistics, biostatistics, epidemiology" />
+<meta name="keywords" content="R, statistics, biostatistics, epidemiology" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -56,13 +56,97 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
@@ -95,6 +179,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
@@ -162,103 +247,122 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Purpose</a></li>
-<li><a href="#orgheadline9">2. Meetings &amp; presentations</a>
+<li><a href="#orga12825c">Meetings &amp; presentations</a>
 <ul>
-<li><a href="#orgheadline2">2.1. <span class="todo TODO">TODO</span> Reading: <b>Advanced R</b> - subsetting&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></a></li>
-<li><a href="#orgheadline3">2.2. <span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - data structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></a></li>
-<li><a href="#orgheadline4">2.3. <span class="done DONE">DONE</span> R environments&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Johan">Johan</span></span></a></li>
-<li><a href="#orgheadline5">2.4. <span class="done DONE">DONE</span> Robust variance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Arvid">Arvid</span></span></a></li>
-<li><a href="#orgheadline8">2.5. <span class="done DONE">DONE</span> Meetings  <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-03-31 Thu&gt;</span></span></a>
+<li><a href="#orgf5ce558"><span class="todo TODO">TODO</span> Reading: <b>Advanced R</b> - vocabulary, style and functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></a></li>
+<li><a href="#org71ce194"><span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - subsetting&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></a></li>
+<li><a href="#org0d68852"><span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - data structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></a></li>
+<li><a href="#orgddf2558"><span class="done DONE">DONE</span> R environments&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Johan">Johan</span></span></a></li>
+<li><a href="#org88db900"><span class="done DONE">DONE</span> Robust variance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Arvid">Arvid</span></span></a></li>
+<li><a href="#orgd4449e8"><span class="done DONE">DONE</span> Meetings  <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-03-31 tor&gt;</span></span></a>
 <ul>
-<li><a href="#orgheadline6">2.5.1. Attendees</a></li>
-<li><a href="#orgheadline7">2.5.2. Decisions</a></li>
+<li><a href="#orgad2ec6e">Attendees</a></li>
+<li><a href="#org758b77d">Decisions</a></li>
 </ul>
 </li>
+<li><a href="#orgf792085">Purpose of the meetings</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline42">3. Potential topics pool</a>
+<li><a href="#org9de0700">Potential topics pool</a>
 <ul>
-<li><a href="#orgheadline16">3.1. Making R-packages</a>
+<li><a href="#orga6330a1">Making R-packages</a>
 <ul>
-<li><a href="#orgheadline10">3.1.1. Documentation</a></li>
-<li><a href="#orgheadline11">3.1.2. Testing</a></li>
-<li><a href="#orgheadline13">3.1.3. Debugging&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
-<li><a href="#orgheadline15">3.1.4. Profiling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
+<li><a href="#orgd923709">Documentation</a></li>
+<li><a href="#org260f311">Testing</a></li>
+<li><a href="#orgadde2b6">Debugging&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
+<li><a href="#org9730f4b">Rcpp</a></li>
+<li><a href="#orgb20b510">Profiling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline17">3.2. Permutation test&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
-<li><a href="#orgheadline18">3.3. Data analysis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></a></li>
-<li><a href="#orgheadline19">3.4. Work flow&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></a></li>
-<li><a href="#orgheadline20">3.5. Splines&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Xingrong">Xingrong</span></span></a></li>
-<li><a href="#orgheadline23">3.6. Extending R</a>
+<li><a href="#org4674974">Permutation test&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
+<li><a href="#org30d02a9">Data analysis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></a></li>
+<li><a href="#orgbcddff1">Work flow&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></a></li>
+<li><a href="#org29289e3">Splines&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Xingrong">Xingrong</span></span></a></li>
+<li><a href="#org8e7b86d">Extending R</a>
 <ul>
-<li><a href="#orgheadline21">3.6.1. Rcpp&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></a></li>
-<li><a href="#orgheadline22">3.6.2. JS&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span>&#xa0;<span class="Tobba">Tobba</span></span></a></li>
+<li><a href="#org961cc51">Rcpp&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></a></li>
+<li><a href="#orgda2cb1f">JS&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span>&#xa0;<span class="Tobba">Tobba</span></span></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline27">3.7. Speeding up R</a>
+<li><a href="#org474950c">Speeding up R</a>
 <ul>
-<li><a href="#orgheadline24">3.7.1. Multi-core&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
-<li><a href="#orgheadline25">3.7.2. Multi-node</a></li>
-<li><a href="#orgheadline26">3.7.3. Compiled R code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
+<li><a href="#org5cb8871">Multi-core&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
+<li><a href="#org224d46f">Multi-node</a></li>
+<li><a href="#org13974f4">Compiled R code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline29">3.8. Plotting</a>
+<li><a href="#org5d0462c">Plotting</a>
 <ul>
-<li><a href="#orgheadline28">3.8.1. ggplot2&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Robert">Robert</span></span></a></li>
+<li><a href="#org6f9d7f0">ggplot2&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Robert">Robert</span></span></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline30">3.9. Data Management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></a></li>
-<li><a href="#orgheadline33">3.10. General coding schemes</a>
+<li><a href="#org590c7a5">Data Management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></a></li>
+<li><a href="#org4165147">General coding schemes</a>
 <ul>
-<li><a href="#orgheadline31">3.10.1. R classes and object oriented coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span>&#xa0;<span class="Henric">Henric</span></span></a></li>
-<li><a href="#orgheadline32">3.10.2. Functional coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></a></li>
+<li><a href="#org81b08c3">R classes and object oriented coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span>&#xa0;<span class="Henric">Henric</span></span></a></li>
+<li><a href="#orgea42932">Functional coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline35">3.11. Hosting R processes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></a>
+<li><a href="#org9a6c0fc">Hosting R processes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></a>
 <ul>
-<li><a href="#orgheadline34">3.11.1. Server misc</a></li>
+<li><a href="#org790b414">Server misc</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline38">3.12. Simulation</a>
+<li><a href="#orgd85d8f1">Simulation</a>
 <ul>
-<li><a href="#orgheadline36">3.12.1. Bootstrapping</a></li>
-<li><a href="#orgheadline37">3.12.2. Reporting simulation results</a></li>
+<li><a href="#org073c53d">Bootstrapping</a></li>
+<li><a href="#org81c3c2d">Reporting simulation results</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline40">3.13. Predictive modelling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Peter">Peter</span></span></a>
+<li><a href="#org1616ebc">Predictive modelling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Peter">Peter</span></span></a>
 <ul>
-<li><a href="#orgheadline39">3.13.1. Machine Learning</a></li>
+<li><a href="#org787523f">Machine Learning</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline41">3.14. Misc</a></li>
+<li><a href="#orga197d4f">Pitfalls</a></li>
+<li><a href="#org6b661c7">Misc</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline43">4. Read &amp; discuss</a></li>
-<li><a href="#orgheadline44">5. Other activities</a></li>
+<li><a href="#org48f37c0">Read &amp; discuss</a></li>
+<li><a href="#orgdaa3b53">Other activities</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Purpose</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orga12825c" class="outline-2">
+<h2 id="orga12825c">Meetings &amp; presentations</h2>
+<div class="outline-text-2" id="text-orga12825c">
+</div><div id="outline-container-orgf5ce558" class="outline-3">
+<h3 id="orgf5ce558"><span class="todo TODO">TODO</span> Reading: <b>Advanced R</b> - vocabulary, style and functions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></h3>
+<div class="outline-text-3" id="text-orgf5ce558">
 <p>
-There is a lot of knowledge and advanced usage of R within MEB. It
-would be nice to be able to share some of that knowledge. Preferably
-this could be done without creating too much extra work.
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2017-02-23 tor 10:30&gt;&#x2013;&lt;2017-02-23 tor 11:30&gt;</span></span>
 </p>
+<ul class="org-ul">
+<li>Read &amp; do the exercises in the <b>vocabulary</b>, <b>style</b> and <b>functions</b>
+chapters before the meeting.</li>
+
+<li>The material is available here::
+<ul class="org-ul">
+<li><a href="http://adv-r.had.co.nz/Vocabulary.html">http://adv-r.had.co.nz/Vocabulary.html</a></li>
+<li><a href="http://adv-r.had.co.nz/Style.html">http://adv-r.had.co.nz/Style.html</a></li>
+<li><a href="http://adv-r.had.co.nz/Functions.html">http://adv-r.had.co.nz/Functions.html</a></li>
+</ul></li>
+
+<li>The major focus will be the functions chapter. The first two
+chapters are short and will only be discussed if there are specific
+questions (the style chapter might be better suited over a friendly
+cup of coffee).</li>
+
+<li>Location: Wargentin</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9"><span class="section-number-2">2</span> Meetings &amp; presentations</h2>
-<div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgheadline2" class="outline-3">
-<h3 id="orgheadline2"><span class="section-number-3">2.1</span> <span class="todo TODO">TODO</span> Reading: <b>Advanced R</b> - subsetting&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org71ce194" class="outline-3">
+<h3 id="org71ce194"><span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - subsetting&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></h3>
+<div class="outline-text-3" id="text-org71ce194">
 <p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-21 Tue 13:00&gt;&#x2013;&lt;2016-06-21 Tue 14:00&gt;</span></span>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-21 tis 13:00&gt;&#x2013;&lt;2016-06-21 tis 14:00&gt;</span></span>
 </p>
 <ul class="org-ul">
 <li>Reading group on: <a href="http://adv-r.had.co.nz/Subsetting.html">http://adv-r.had.co.nz/Subsetting.html</a></li>
@@ -267,11 +371,11 @@ this could be done without creating too much extra work.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">2.2</span> <span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - data structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org0d68852" class="outline-3">
+<h3 id="org0d68852"><span class="done DONE">DONE</span> Reading: <b>Advanced R</b> - data structures&#xa0;&#xa0;&#xa0;<span class="tag"><span class="all">all</span></span></h3>
+<div class="outline-text-3" id="text-org0d68852">
 <p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-31 Tue 09:00&gt;&#x2013;&lt;2016-05-31 Tue 11:00&gt;</span></span>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-31 tis 09:00&gt;&#x2013;&lt;2016-05-31 tis 11:00&gt;</span></span>
 </p>
 <ul class="org-ul">
 <li>Reading group on: <a href="http://adv-r.had.co.nz/Introduction.html">http://adv-r.had.co.nz/Introduction.html</a> by Hadley Wickham</li>
@@ -280,11 +384,11 @@ this could be done without creating too much extra work.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">2.3</span> <span class="done DONE">DONE</span> R environments&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Johan">Johan</span></span></h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-orgddf2558" class="outline-3">
+<h3 id="orgddf2558"><span class="done DONE">DONE</span> R environments&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Johan">Johan</span></span></h3>
+<div class="outline-text-3" id="text-orgddf2558">
 <p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-12 Thu 10:30&gt;&#x2013;&lt;2016-05-12 Thu 11:30&gt;</span></span>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-12 tor 10:30&gt;&#x2013;&lt;2016-05-12 tor 11:30&gt;</span></span>
 </p>
 <ul class="org-ul">
 <li>Presenter: Johan</li>
@@ -294,11 +398,11 @@ this could be done without creating too much extra work.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">2.4</span> <span class="done DONE">DONE</span> Robust variance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Arvid">Arvid</span></span></h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-org88db900" class="outline-3">
+<h3 id="org88db900"><span class="done DONE">DONE</span> Robust variance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Arvid">Arvid</span></span></h3>
+<div class="outline-text-3" id="text-org88db900">
 <p>
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-04-21 Thu 10:30&gt;&#x2013;&lt;2016-04-21 Thu 11:30&gt;</span></span>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2016-04-21 tor 10:30&gt;&#x2013;&lt;2016-04-21 tor 11:30&gt;</span></span>
 </p>
 <ul class="org-ul">
 <li>Presenter: Arvid</li>
@@ -312,20 +416,20 @@ this could be done without creating too much extra work.
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">2.5</span> <span class="done DONE">DONE</span> Meetings  <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-03-31 Thu&gt;</span></span></h3>
-<div class="outline-text-3" id="text-2-5">
-</div><div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">2.5.1</span> Attendees</h4>
-<div class="outline-text-4" id="text-2-5-1">
+<div id="outline-container-orgd4449e8" class="outline-3">
+<h3 id="orgd4449e8"><span class="done DONE">DONE</span> Meetings  <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-03-31 tor&gt;</span></span></h3>
+<div class="outline-text-3" id="text-orgd4449e8">
+</div><div id="outline-container-orgad2ec6e" class="outline-4">
+<h4 id="orgad2ec6e">Attendees</h4>
+<div class="outline-text-4" id="text-orgad2ec6e">
 <p>
 Xingrong, Elisabeth, Andreas, Nathalie, Henric, Arvid, Peter, Mark and Alex
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">2.5.2</span> Decisions</h4>
-<div class="outline-text-4" id="text-2-5-2">
+<div id="outline-container-org758b77d" class="outline-4">
+<h4 id="org758b77d">Decisions</h4>
+<div class="outline-text-4" id="text-org758b77d">
 <ul class="org-ul">
 <li>The meeting will take place every three weeks.</li>
 <li>The meeting format will be casual with one person presenting
@@ -336,29 +440,39 @@ interest in the Advanced R book <a href="http://adv-r.had.co.nz/">http://adv-r.h
 </div>
 </div>
 </div>
+<div id="outline-container-orgf792085" class="outline-3">
+<h3 id="orgf792085">Purpose of the meetings</h3>
+<div class="outline-text-3" id="text-orgf792085">
+<p>
+There is a lot of knowledge and advanced usage of R within MEB. It
+would be nice to be able to share some of that knowledge. Preferably
+this could be done without creating too much extra work.
+</p>
 </div>
-<div id="outline-container-orgheadline42" class="outline-2">
-<h2 id="orgheadline42"><span class="section-number-2">3</span> Potential topics pool</h2>
-<div class="outline-text-2" id="text-3">
+</div>
+</div>
+<div id="outline-container-org9de0700" class="outline-2">
+<h2 id="org9de0700">Potential topics pool</h2>
+<div class="outline-text-2" id="text-org9de0700">
 <p>
 The assigned names here are only <span class="underline">preliminary</span>.
 </p>
 </div>
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">3.1</span> Making R-packages</h3>
-<div class="outline-text-3" id="text-3-1">
-</div><div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">3.1.1</span> Documentation</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-orga6330a1" class="outline-3">
+<h3 id="orga6330a1">Making R-packages</h3>
+<div class="outline-text-3" id="text-orga6330a1">
+</div><div id="outline-container-orgd923709" class="outline-4">
+<h4 id="orgd923709">Documentation</h4>
+<div class="outline-text-4" id="text-orgd923709">
 <ul class="org-ul">
 <li>Roxygen</li>
 <li>Rmarkdown</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11"><span class="section-number-4">3.1.2</span> Testing</h4>
-<div class="outline-text-4" id="text-3-1-2">
+<div id="outline-container-org260f311" class="outline-4">
+<h4 id="org260f311">Testing</h4>
+<div class="outline-text-4" id="text-org260f311">
 <ul class="org-ul">
 <li>testthat</li>
 <li>assertthat</li>
@@ -366,9 +480,9 @@ The assigned names here are only <span class="underline">preliminary</span>.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline13" class="outline-4">
-<h4 id="orgheadline13"><span class="section-number-4">3.1.3</span> Debugging&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
-<div class="outline-text-4" id="text-3-1-3">
+<div id="outline-container-orgadde2b6" class="outline-4">
+<h4 id="orgadde2b6">Debugging&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
+<div class="outline-text-4" id="text-orgadde2b6">
 <ul class="org-ul">
 <li>traceback</li>
 <li>debug</li>
@@ -380,105 +494,103 @@ The assigned names here are only <span class="underline">preliminary</span>.
 <a href="http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf">http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf</a>
 </p>
 </div>
-<ol class="org-ol"><li><a id="orgheadline12"></a>Rcpp<br  /><div class="outline-text-5" id="text-3-1-3-1">
+</div>
+<div id="outline-container-org9730f4b" class="outline-4">
+<h4 id="org9730f4b">Rcpp</h4>
+<div class="outline-text-4" id="text-org9730f4b">
 <ul class="org-ul">
 <li>Valgrind</li>
 </ul>
-</div></li></ol>
 </div>
-<div id="outline-container-orgheadline15" class="outline-4">
-<h4 id="orgheadline15"><span class="section-number-4">3.1.4</span> Profiling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
-<div class="outline-text-4" id="text-3-1-4">
+</div>
+<div id="outline-container-orgb20b510" class="outline-4">
+<h4 id="orgb20b510">Profiling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
+<div class="outline-text-4" id="text-orgb20b510">
 <ul class="org-ul">
 <li>Rprof</li>
 <li>lineprof</li>
 <li>microbenchmark</li>
 </ul>
 </div>
-<ol class="org-ol"><li><a id="orgheadline14"></a>Rcpp<br  /><div class="outline-text-5" id="text-3-1-4-1">
-<ul class="org-ul">
-<li>Valgrind</li>
-</ul>
-</div></li></ol>
 </div>
 </div>
-<div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">3.2</span> Permutation test&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org4674974" class="outline-3">
+<h3 id="org4674974">Permutation test&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h3>
+<div class="outline-text-3" id="text-org4674974">
 <ul class="org-ul">
 <li>coin package</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline18" class="outline-3">
-<h3 id="orgheadline18"><span class="section-number-3">3.3</span> Data analysis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org30d02a9" class="outline-3">
+<h3 id="org30d02a9">Data analysis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></h3>
+<div class="outline-text-3" id="text-org30d02a9">
 <ul class="org-ul">
 <li>Hmisc, multcomp, car</li>
 <li>non-linear contrasts, car??</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">3.4</span> Work flow&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-orgbcddff1" class="outline-3">
+<h3 id="orgbcddff1">Work flow&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span></span></h3>
+<div class="outline-text-3" id="text-orgbcddff1">
 <ul class="org-ul">
 <li>literate programming</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-3">
-<h3 id="orgheadline20"><span class="section-number-3">3.5</span> Splines&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Xingrong">Xingrong</span></span></h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-org29289e3" class="outline-3">
+<h3 id="org29289e3">Splines&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Xingrong">Xingrong</span></span></h3>
+<div class="outline-text-3" id="text-org29289e3">
 <ul class="org-ul">
 <li>Xingrong</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline23" class="outline-3">
-<h3 id="orgheadline23"><span class="section-number-3">3.6</span> Extending R</h3>
-<div class="outline-text-3" id="text-3-6">
-</div><div id="outline-container-orgheadline21" class="outline-4">
-<h4 id="orgheadline21"><span class="section-number-4">3.6.1</span> Rcpp&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></h4>
-<div class="outline-text-4" id="text-3-6-1">
+<div id="outline-container-org8e7b86d" class="outline-3">
+<h3 id="org8e7b86d">Extending R</h3>
+<div class="outline-text-3" id="text-org8e7b86d">
+</div><div id="outline-container-org961cc51" class="outline-4">
+<h4 id="org961cc51">Rcpp&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></h4>
+<div class="outline-text-4" id="text-org961cc51">
 <ul class="org-ul">
 <li>Rcpp</li>
 <li>Armadillo</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline22" class="outline-4">
-<h4 id="orgheadline22"><span class="section-number-4">3.6.2</span> JS&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span>&#xa0;<span class="Tobba">Tobba</span></span></h4>
-<div class="outline-text-4" id="text-3-6-2">
+<div id="outline-container-orgda2cb1f" class="outline-4">
+<h4 id="orgda2cb1f">JS&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span>&#xa0;<span class="Tobba">Tobba</span></span></h4>
+<div class="outline-text-4" id="text-orgda2cb1f">
 <p>
 rCharts, plotly, ggvis &amp; htmlwidgets
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline27" class="outline-3">
-<h3 id="orgheadline27"><span class="section-number-3">3.7</span> Speeding up R</h3>
-<div class="outline-text-3" id="text-3-7">
-</div><div id="outline-container-orgheadline24" class="outline-4">
-<h4 id="orgheadline24"><span class="section-number-4">3.7.1</span> Multi-core&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
-<div class="outline-text-4" id="text-3-7-1">
+<div id="outline-container-org474950c" class="outline-3">
+<h3 id="org474950c">Speeding up R</h3>
+<div class="outline-text-3" id="text-org474950c">
+</div><div id="outline-container-org5cb8871" class="outline-4">
+<h4 id="org5cb8871">Multi-core&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
+<div class="outline-text-4" id="text-org5cb8871">
 <ul class="org-ul">
 <li>parallel, foreach, snow</li>
 <li>openmp?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline25" class="outline-4">
-<h4 id="orgheadline25"><span class="section-number-4">3.7.2</span> Multi-node</h4>
-<div class="outline-text-4" id="text-3-7-2">
+<div id="outline-container-org224d46f" class="outline-4">
+<h4 id="org224d46f">Multi-node</h4>
+<div class="outline-text-4" id="text-org224d46f">
 <ul class="org-ul">
 <li>Rmpi, RHadoop</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline26" class="outline-4">
-<h4 id="orgheadline26"><span class="section-number-4">3.7.3</span> Compiled R code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
-<div class="outline-text-4" id="text-3-7-3">
+<div id="outline-container-org13974f4" class="outline-4">
+<h4 id="org13974f4">Compiled R code&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Henric">Henric</span></span></h4>
+<div class="outline-text-4" id="text-org13974f4">
 <p>
 Compiling R code using LLVM by Duncan Temple Lang:
 <a href="http://projecteuclid.org/download/pdfview_1/euclid.ss/1408368570">http://projecteuclid.org/download/pdfview_1/euclid.ss/1408368570</a>
@@ -486,30 +598,30 @@ Compiling R code using LLVM by Duncan Temple Lang:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline29" class="outline-3">
-<h3 id="orgheadline29"><span class="section-number-3">3.8</span> Plotting</h3>
-<div class="outline-text-3" id="text-3-8">
-</div><div id="outline-container-orgheadline28" class="outline-4">
-<h4 id="orgheadline28"><span class="section-number-4">3.8.1</span> ggplot2&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Robert">Robert</span></span></h4>
-<div class="outline-text-4" id="text-3-8-1">
+<div id="outline-container-org5d0462c" class="outline-3">
+<h3 id="org5d0462c">Plotting</h3>
+<div class="outline-text-3" id="text-org5d0462c">
+</div><div id="outline-container-org6f9d7f0" class="outline-4">
+<h4 id="org6f9d7f0">ggplot2&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Robert">Robert</span></span></h4>
+<div class="outline-text-4" id="text-org6f9d7f0">
 <p>
 More advanced version of Roberts student seminar
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline30" class="outline-3">
-<h3 id="orgheadline30"><span class="section-number-3">3.9</span> Data Management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></h3>
-<div class="outline-text-3" id="text-3-9">
+<div id="outline-container-org590c7a5" class="outline-3">
+<h3 id="org590c7a5">Data Management&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></h3>
+<div class="outline-text-3" id="text-org590c7a5">
 <ul class="org-ul">
 <li>dplyr, data.table, sqldf and base</li>
 <li>DB queries from R</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline33" class="outline-3">
-<h3 id="orgheadline33"><span class="section-number-3">3.10</span> General coding schemes</h3>
-<div class="outline-text-3" id="text-3-10">
+<div id="outline-container-org4165147" class="outline-3">
+<h3 id="org4165147">General coding schemes</h3>
+<div class="outline-text-3" id="text-org4165147">
 <p>
 The distinction between <b>functional</b> OOP, as in S3 and S4, and
 Java/C++-style <b>encapsulated</b> OOP, as in Reference Classes and
@@ -520,9 +632,9 @@ into a book that’ll be published later this year:
 <a href="https://www.crcpress.com/Extending-R/Chambers/9781498775717">https://www.crcpress.com/Extending-R/Chambers/9781498775717</a>
 </p>
 </div>
-<div id="outline-container-orgheadline31" class="outline-4">
-<h4 id="orgheadline31"><span class="section-number-4">3.10.1</span> R classes and object oriented coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span>&#xa0;<span class="Henric">Henric</span></span></h4>
-<div class="outline-text-4" id="text-3-10-1">
+<div id="outline-container-org81b08c3" class="outline-4">
+<h4 id="org81b08c3">R classes and object oriented coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Alex">Alex</span>&#xa0;<span class="Henric">Henric</span></span></h4>
+<div class="outline-text-4" id="text-org81b08c3">
 <ul class="org-ul">
 <li>Classes inheritance</li>
 <li>S3, Alex
@@ -532,9 +644,9 @@ into a book that’ll be published later this year:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline32" class="outline-4">
-<h4 id="orgheadline32"><span class="section-number-4">3.10.2</span> Functional coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></h4>
-<div class="outline-text-4" id="text-3-10-2">
+<div id="outline-container-orgea42932" class="outline-4">
+<h4 id="orgea42932">Functional coding in R&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Mark">Mark</span></span></h4>
+<div class="outline-text-4" id="text-orgea42932">
 <ul class="org-ul">
 <li>Functional-packages
 <ul class="org-ul">
@@ -565,17 +677,17 @@ into a book that’ll be published later this year:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline35" class="outline-3">
-<h3 id="orgheadline35"><span class="section-number-3">3.11</span> Hosting R processes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></h3>
-<div class="outline-text-3" id="text-3-11">
+<div id="outline-container-org9a6c0fc" class="outline-3">
+<h3 id="org9a6c0fc">Hosting R processes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Andreas">Andreas</span></span></h3>
+<div class="outline-text-3" id="text-org9a6c0fc">
 <ul class="org-ul">
 <li>shiny</li>
 <li>opencpu</li>
 </ul>
 </div>
-<div id="outline-container-orgheadline34" class="outline-4">
-<h4 id="orgheadline34"><span class="section-number-4">3.11.1</span> Server misc</h4>
-<div class="outline-text-4" id="text-3-11-1">
+<div id="outline-container-org790b414" class="outline-4">
+<h4 id="org790b414">Server misc</h4>
+<div class="outline-text-4" id="text-org790b414">
 <ul class="org-ul">
 <li>rocker</li>
 <li>Rstudio-server</li>
@@ -583,38 +695,38 @@ into a book that’ll be published later this year:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline38" class="outline-3">
-<h3 id="orgheadline38"><span class="section-number-3">3.12</span> Simulation</h3>
-<div class="outline-text-3" id="text-3-12">
+<div id="outline-container-orgd85d8f1" class="outline-3">
+<h3 id="orgd85d8f1">Simulation</h3>
+<div class="outline-text-3" id="text-orgd85d8f1">
 <ul class="org-ul">
 <li>for evaluating sampling techniques</li>
 <li>comparing estimates from various methods</li>
 <li><a href="https://www.jstatsoft.org/article/view/v069i04">https://www.jstatsoft.org/article/view/v069i04</a></li>
 </ul>
 </div>
-<div id="outline-container-orgheadline36" class="outline-4">
-<h4 id="orgheadline36"><span class="section-number-4">3.12.1</span> Bootstrapping</h4>
+<div id="outline-container-org073c53d" class="outline-4">
+<h4 id="org073c53d">Bootstrapping</h4>
 </div>
-<div id="outline-container-orgheadline37" class="outline-4">
-<h4 id="orgheadline37"><span class="section-number-4">3.12.2</span> Reporting simulation results</h4>
-<div class="outline-text-4" id="text-3-12-2">
+<div id="outline-container-org81c3c2d" class="outline-4">
+<h4 id="org81c3c2d">Reporting simulation results</h4>
+<div class="outline-text-4" id="text-org81c3c2d">
 <ul class="org-ul">
 <li>Graph and table designs</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline40" class="outline-3">
-<h3 id="orgheadline40"><span class="section-number-3">3.13</span> Predictive modelling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Peter">Peter</span></span></h3>
-<div class="outline-text-3" id="text-3-13">
+<div id="outline-container-org1616ebc" class="outline-3">
+<h3 id="org1616ebc">Predictive modelling&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Peter">Peter</span></span></h3>
+<div class="outline-text-3" id="text-org1616ebc">
 <ul class="org-ul">
 <li>Applied Predictive Modeling book:
 <a href="http://appliedpredictivemodeling.com/">http://appliedpredictivemodeling.com/</a></li>
 </ul>
 </div>
-<div id="outline-container-orgheadline39" class="outline-4">
-<h4 id="orgheadline39"><span class="section-number-4">3.13.1</span> Machine Learning</h4>
-<div class="outline-text-4" id="text-3-13-1">
+<div id="outline-container-org787523f" class="outline-4">
+<h4 id="org787523f">Machine Learning</h4>
+<div class="outline-text-4" id="text-org787523f">
 <ul class="org-ul">
 <li>Caret package: <a href="https://topepo.github.io/caret/index.html">https://topepo.github.io/caret/index.html</a></li>
 <li>Interview with Max Kuhn:
@@ -623,11 +735,18 @@ into a book that’ll be published later this year:
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-orgheadline41" class="outline-3">
-<h3 id="orgheadline41"><span class="section-number-3">3.14</span> Misc</h3>
-<div class="outline-text-3" id="text-3-14">
+<div id="outline-container-orga197d4f" class="outline-3">
+<h3 id="orga197d4f">Pitfalls</h3>
+<div class="outline-text-3" id="text-orga197d4f">
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-an-integer-numeric-without-a-loss-of-information">http://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-an-integer-numeric-without-a-loss-of-information</a></li>
+<li>Use: stopifnot(identical(impl1, impl2))</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6b661c7" class="outline-3">
+<h3 id="org6b661c7">Misc</h3>
+<div class="outline-text-3" id="text-org6b661c7">
 <ul class="org-ul">
 <li>GAMS</li>
 <li>Imputation</li>
@@ -636,9 +755,9 @@ into a book that’ll be published later this year:
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline43" class="outline-2">
-<h2 id="orgheadline43"><span class="section-number-2">4</span> Read &amp; discuss</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org48f37c0" class="outline-2">
+<h2 id="org48f37c0">Read &amp; discuss</h2>
+<div class="outline-text-2" id="text-org48f37c0">
 <ul class="org-ul">
 <li><a href="http://adv-r.had.co.nz/">http://adv-r.had.co.nz/</a></li>
 <li><b>R cookbook</b></li>
@@ -646,9 +765,9 @@ into a book that’ll be published later this year:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline44" class="outline-2">
-<h2 id="orgheadline44"><span class="section-number-2">5</span> Other activities</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgdaa3b53" class="outline-2">
+<h2 id="orgdaa3b53">Other activities</h2>
+<div class="outline-text-2" id="text-orgdaa3b53">
 <ul class="org-ul">
 <li>Introduce R to new users within MEB</li>
 <li>Offer courses in R</li>
@@ -660,7 +779,7 @@ into a book that’ll be published later this year:
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Andreas Karlsson</p>
-<p class="date">Created: 2016-06-15 Wed 13:25</p>
+<p class="date">Created: 2017-01-27 fre 14:25</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -20,16 +20,30 @@
 #+TITLE:     MEB Advanced R group
 #+AUTHOR:    Andreas Karlsson
 
+#+OPTIONS: ':t num:nil
+
 #+DESCRIPTION: Study group for R users at MEB
 #+KEYWORDS:  R, statistics, biostatistics, epidemiology
 #+LANGUAGE:  en
 
-* Purpose
-There is a lot of knowledge and advanced usage of R within MEB. It
-would be nice to be able to share some of that knowledge. Preferably
-this could be done without creating too much extra work.
 * Meetings & presentations
-** TODO Reading: *Advanced R* - subsetting                              :all:
+** TODO Reading: *Advanced R* - vocabulary, style and functions        :all:
+<2017-02-23 tor 10:30-11:30>
++ Read & do the exercises in the *vocabulary*, *style* and *functions*
+  chapters before the meeting.
+
++ The material is available here::
+  + http://adv-r.had.co.nz/Vocabulary.html
+  + http://adv-r.had.co.nz/Style.html
+  + http://adv-r.had.co.nz/Functions.html
+
++ The major focus will be the functions chapter. The first two
+  chapters are short and will only be discussed if there are specific
+  questions (the style chapter might be better suited over a friendly
+  cup of coffee).
+
++ Location: Wargentin
+** DONE Reading: *Advanced R* - subsetting                             :all:
 <2016-06-21 Tue 13:00-14:00>
 + Reading group on: [[http://adv-r.had.co.nz/Subsetting.html]]
 + Read & do exercises of *subsetting* chapter before meeting
@@ -61,6 +75,10 @@ Xingrong, Elisabeth, Andreas, Nathalie, Henric, Arvid, Peter, Mark and Alex
   (inspired by the applied biostat group).
 + There were also discussions regarding a reading group with particular
   interest in the Advanced R book http://adv-r.had.co.nz/.
+** Purpose of the meetings
+There is a lot of knowledge and advanced usage of R within MEB. It
+would be nice to be able to share some of that knowledge. Preferably
+this could be done without creating too much extra work.
 * Potential topics pool
 The assigned names here are only _preliminary_.
 ** Making R-packages
@@ -78,14 +96,12 @@ The assigned names here are only _preliminary_.
 + trace
 + recover
 [[http://www.biostat.jhsph.edu/~rpeng/docs/R-debug-tools.pdf]]
-**** Rcpp
+*** Rcpp
 + Valgrind
 *** Profiling                                                      :Henric:
 + Rprof
 + lineprof
 + microbenchmark
-**** Rcpp
-+ Valgrind
 ** Permutation test                                                 :Henric:
 + coin package
 ** Data analysis                                                       :Alex:
@@ -166,8 +182,9 @@ https://www.crcpress.com/Extending-R/Chambers/9781498775717
 + Caret package: https://topepo.github.io/caret/index.html
 + Interview with Max Kuhn:
   http://machinelearningmastery.com/caret-r-package-for-applied-predictive-modeling/
-
-
+** Pitfalls
++ http://stackoverflow.com/questions/3418128/how-to-convert-a-factor-to-an-integer-numeric-without-a-loss-of-information
++ Use: stopifnot(identical(impl1, impl2))
 ** Misc
 + GAMS
 + Imputation

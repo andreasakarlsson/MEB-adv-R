@@ -190,7 +190,8 @@ https://www.crcpress.com/Extending-R/Chambers/9781498775717
 + Imputation
 + R and version control
 * Read & discuss
-+ http://adv-r.had.co.nz/
++ *Advanced R:*  http://adv-r.had.co.nz/
++ *R for Data Science:* http://r4ds.had.co.nz/
 + *R cookbook*
 + *Applied Predictive Modeling* by Max Kuhn and Kjell Johnson
 * Other activities

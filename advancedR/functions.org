@@ -1,0 +1,352 @@
+#+STARTUP: overview
+#+STARTUP: hideblocks
+#+OPTIONS: toc:nil
+* Function components
+** Primitive functions
+*** Exercise 1
+#+BEGIN_SRC R
+  is.primitive(sum)
+#+END_SRC
+
+#+RESULTS:
+: TRUE
+
++ Side note:
+  https://cran.r-project.org/doc/manuals/r-release/R-ints.html#g_t_002eInternal-vs-_002ePrimitive
+
+*** Exercise 2
+#+BEGIN_SRC R :include.rownames true
+  objs <- mget(ls("package:base"), inherits = TRUE)
+  funs <- Filter(is.function, objs)
+
+  ## 2a
+  n_args <- lapply(funs, function(x) length(formals(x)))
+  max_arg <- n_args[which.max(unlist(n_args))]
+  print(paste(names(max_arg), "has", max_arg, "arguments"))
+
+  ## 2b
+  no_arg <- sum(unlist(lapply(n_args, function(x) x == 0)))
+  print(paste(no_arg, "functions have no arguments"))
+
+  ## They all seem to be primitive
+  sum(unlist(lapply(funs, function(x) length(formals(x)) == 0 && is.primitive(x))))
+
+  ## 2c
+  prim.funs <- Filter(is.primitive,Filter(is.function, objs))
+#+END_SRC
+
+*** Exercise 3
+#+BEGIN_SRC R
+  ## body
+  body() # the code inside the function.
+
+  ## arguments
+  formals() # the list of arguments which controls how you can call the function.
+
+  ## enivronment
+  environment() # the “map” of the location of the function’s variables.
+#+END_SRC
+
+*** Exercise 4
+ E.g. primitive functions
+
+* Lexical scoping
+** Exercise 1
+#+BEGIN_SRC R
+
+  c <- 10
+  c(c = c)
+
+#+END_SRC
+
+#+RESULTS:
+: 10
+
++ c <- 10 assign a variable
++ c() combine function
++ c = c assign a name to argument
+
+** Exercise 2
++ *name masking* - within lexical scoping
++ *functions vs. variables* - parenthesis causes R to ignore variables
++ *a fresh start* - function environment is created on each call
++ *dynamic lookup* - lookup is done on evaluation
+
+** Exercise 3
+#+BEGIN_SRC R
+  f <- function(x) {
+    f <- function(x) {
+      f <- function(x) {
+	x ^ 2
+      }
+      f(x) + 1
+    }
+    f(x) * 2
+  }
+  f(10)
+#+END_SRC
+
+#+RESULTS:
+: 202
+* Every operation is a function call
+* Function arguments
+** Exercise 1
+#+BEGIN_SRC R
+  x <- sample(x = c(1:10, NA), size = 20, replace = TRUE)
+  y <- runif(n = 20, min = 0, max = 1)
+  cor(x = x, y = y, use = "pairwise.complete.obs", method = "kendall")
+#+END_SRC
+
+
+** Exercise 2
+#+BEGIN_SRC R
+  f1 <- function(x = {y <- 1; 2}, y = 0) {
+      x + y
+  }
+  f1()
+#+END_SRC
+
+#+RESULTS:
+: 3
+
++ Lazy evaluation. As the default value for x is evaluated so is
+  y. The default value for the y argument will there for not be used.
+
+** Exercise 3
+#+BEGIN_SRC R
+  f2 <- function(x = z) {
+    z <- 100
+    x
+  }
+  f2()
+#+END_SRC
+
+#+RESULTS:
+: 100
++ That default arguments can be defined in terms of variables created within the function.
+
+* Special calls
+** Exercise 1
++ Replacement functions have special names xxx<-
+#+BEGIN_SRC R
+  objs <- mget(ls("package:base"), inherits = TRUE)
+  funs <- Filter(is.function, objs)
+  funs_name <- names(unlist(funs))
+  funs_name[grep(".<-$",funs_name)]
+#+END_SRC
+
+#+RESULTS:
+| <<-              |
+| [<-              |
+| [[<-             |
+| @<-              |
+| $<-              |
+| attr<-           |
+| attributes<-     |
+| body<-           |
+| class<-          |
+| colnames<-       |
+| comment<-        |
+| diag<-           |
+| dim<-            |
+| dimnames<-       |
+| Encoding<-       |
+| environment<-    |
+| formals<-        |
+| is.na<-          |
+| length<-         |
+| levels<-         |
+| mode<-           |
+| mostattributes<- |
+| names<-          |
+| oldClass<-       |
+| parent.env<-     |
+| regmatches<-     |
+| row.names<-      |
+| rownames<-       |
+| split<-          |
+| storage.mode<-   |
+| substr<-         |
+| substring<-      |
+| units<-          |
+
+
+** Exercise 2
+
+All user-created infix functions must start and end with %. The names
+of infix functions are more flexible than regular R functions: they
+can contain any sequence of characters (except “%”, of course).
+
+** Exercise 3
+#+BEGIN_SRC R
+  `%xor%` <- function(a, b)  !a & b | a & !b # xor(a, b)
+
+  a <- as.logical(rbinom(50, 1, 0.5))
+  b <- as.logical(rbinom(50, 1, 0.5))
+
+  identical(xor(a, b), a %xor% b)
+#+END_SRC
+
+
+** Exercise 4
+#+BEGIN_SRC R
+  v1 <- letters[1:5]
+  v2 <- letters[4:8]
+
+  `%U%` <- function(a, b) unique(c(a, b))
+  identical(union(v1, v2), v1 %U% v2)
+
+  `%∩%` <- function(a, b) b[match(a, b, 0L)]
+  identical(intersect(v1, v2), v1 %∩% v2)
+
+  `%\\%` <- function(a, b) a[!match(a, b, 0L)]
+  identical(setdiff(v1, v2), v1 %\% v2)
+
+#+END_SRC
+
+
+** Exercise 5
+#+BEGIN_SRC R
+  `rReplace<-` <- function(x, value) {
+    index <- max(1, floor(runif(1) * length(x)))
+    x[index] <- value
+    x
+  }
+  x <- 1:10
+  rReplace(x) <- 42
+#+END_SRC
+
+
+
+* Return values
+
+** Exercise 1
+The chdir argument in source() uses add = TRUE, i.e. adds to previous
+on.exit()
+
+** Exercise 2
+
+#+BEGIN_SRC R
+  library(ggplot2)
+  detach("package:ggplot2", unload=TRUE)
+
+  op <- options()
+  options(op)     # reset (all) initial options
+
+  old.par <- par(no.readonly = TRUE) # all par settings which
+                                          # could be changed.
+  par(old.par)
+#+END_SRC
+
+** Exercise 3
+#+BEGIN_SRC R
+  myplot <- function(code) {
+      dev.new()
+      on.exit(dev.off())
+      force(code)
+  }
+
+  myplot(plot(rnorm))
+#+END_SRC
+
+** Exercise 4
+By closing/removing the file in a on.exit( add = TRUE) much of logic
+for when to close the file appears to have been reduced.
+
+* Quiz
+1. What are the three components of a function?
+   + body
+   + arguments (compare function signature)
+   + environment
+
+2. What does the following code return?
+
+#+BEGIN_SRC R
+  x <- 10
+  f1 <- function(x) {
+    function() {
+      x + 10
+    }
+  }
+  f1(1)()
+#+END_SRC
+
+#+RESULTS:
+: 11
+
+3. How would you more typically write this code?
+
+#+BEGIN_SRC R
+  `+`(1, `*`(2, 3))
+#+END_SRC
+
+#+RESULTS:
+: 7
+
+#+BEGIN_SRC elisp
+  (+ 1 (* 2  3))
+#+END_SRC
+
+#+RESULTS:
+: 7
+
+
+#+BEGIN_SRC R
+  (1 + (2 * 3))
+#+END_SRC
+
+#+RESULTS:
+: 7
+
+4. How could you make this call easier to read?
+
+
+#+BEGIN_SRC R
+  mean(, TRUE, x = c(1:10, NA))
+#+END_SRC
+
+#+RESULTS:
+: 5.5
+
+#+BEGIN_SRC R
+  mean(x = c(1:10, NA), na.rm=TRUE)
+#+END_SRC
+
+#+RESULTS:
+: 5.5
+
+
+5. Does the following function throw an error when called? Why/why
+   not?
+
+#+BEGIN_SRC R
+  f2 <- function(a, b) {
+    a * 10
+  }
+  f2(10, stop("This is an error!"))
+#+END_SRC
+
+#+RESULTS:
+: 100
+
+   + Lazy evaluation (b is not used).
+
+6. What is an infix function? How do you write it? What’s a
+   replacement function? How do you write it?
+
+   + The function name comes in between its arguments. `%+%` <- function
+
+   + Replacement functions act like they modify their arguments in
+     place, and have the special name xxx<-. `xxx<-` <- function
+
+7. What function do you use to ensure that a cleanup action occurs
+   regardless of how a function terminates?
+   + on.exit()
+
+#+BEGIN_SRC R
+  require(pryr)
+#+END_SRC
+
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# End:

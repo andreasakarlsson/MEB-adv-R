@@ -27,12 +27,23 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - vocabulary, style and functions        :all:
+** TODO Reading: *Advanced R* - OO field guide                         :all:
+<2017-03-30 tor 10:30-11:30>
++ Read & do the exercises in the *OO field guide* chapter before the meeting.
+
++ The material is available here:
+  + http://adv-r.had.co.nz/OO-essentials.html
+
++ Also, Alex will briefly go through something that came up during the
+  previous meeting.
+
++ Location: Wargentin
+** DONE Reading: *Advanced R* - vocabulary, style and functions        :all:
 <2017-02-23 tor 10:30-11:30>
 + Read & do the exercises in the *vocabulary*, *style* and *functions*
   chapters before the meeting.
 
-+ The material is available here::
++ The material is available here:
   + http://adv-r.had.co.nz/Vocabulary.html
   + http://adv-r.had.co.nz/Style.html
   + http://adv-r.had.co.nz/Functions.html
@@ -41,6 +52,9 @@
   chapters are short and will only be discussed if there are specific
   questions (the style chapter might be better suited over a friendly
   cup of coffee).
+
++ Suggested solutions to the functions chapter are available here:
+  [[file:advancedR/functions.html]]
 
 + Location: Wargentin
 ** DONE Reading: *Advanced R* - subsetting                             :all:

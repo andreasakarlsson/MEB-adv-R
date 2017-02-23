@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-02-23 tor 15:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Andreas Karlsson" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="outline-container-org744a741" class="outline-2">
+<h2 id="org744a741"><span class="section-number-2">1</span> Function components</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org40de74e" class="outline-3">
+<h3 id="org40de74e"><span class="section-number-3">1.1</span> Primitive functions</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-org83dd9c1" class="outline-4">
+<h4 id="org83dd9c1"><span class="section-number-4">1.1.1</span> What function allows you to tell if an object is a function? What function allows you to tell if a function is a primitive function?</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">is.primitive</span><span style="color: #8c8c8c;">(</span>sum<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+TRUE
+</pre>
+
+<ul class="org-ul">
+<li>Side note:
+<a href="https://cran.r-project.org/doc/manuals/r-release/R-ints.html#g_t_002eInternal-vs-_002ePrimitive">https://cran.r-project.org/doc/manuals/r-release/R-ints.html#g_t_002eInternal-vs-_002ePrimitive</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org84626cb" class="outline-4">
+<h4 id="org84626cb"><span class="section-number-4">1.1.2</span> This code makes a list of all functions in the base package.</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<div class="org-src-container">
+<pre class="src src-R">objs <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">mget</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">ls</span><span style="color: #93a8c6;">(</span><span style="color: #87af5f;">"package:base"</span><span style="color: #93a8c6;">)</span>, inherits <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+funs <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">Filter</span><span style="color: #8c8c8c;">(</span>is.function, objs<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</div>
+
+<ol class="org-ol"><li><a id="org67c8b6e"></a>Which base function has the most arguments?<br /></li>
+
+<li><a id="orgd9e3c50"></a>How many base functions have no arguments? What’s special about those functions?<br /></li>
+
+<li><a id="org3db460e"></a>How could you adapt the code to find all primitive functions?<br /><div class="outline-text-5" id="text-1-1-2-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">2a</span>
+n_args <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">lapply</span><span style="color: #8c8c8c;">(</span>funs, <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span> <span style="color: #5fafff;">length</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">formals</span><span style="color: #b0b1a3;">(</span>x<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+max_arg <span style="color: #d7875f; font-weight: bold;">&lt;-</span> n_args<span style="color: #8c8c8c;">[</span><span style="color: #5fafff;">which.max</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">unlist</span><span style="color: #b0b1a3;">(</span>n_args<span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">]</span>
+<span style="color: #5fafff;">print</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">paste</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">names</span><span style="color: #b0b1a3;">(</span>max_arg<span style="color: #b0b1a3;">)</span>, <span style="color: #87af5f;">"has"</span>, max_arg, <span style="color: #87af5f;">"arguments"</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+scan has 22 arguments
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">2b</span>
+no_arg <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">sum</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">unlist</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">lapply</span><span style="color: #b0b1a3;">(</span>n_args, <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #97b098;">(</span>x<span style="color: #97b098;">)</span> x <span style="color: #d7875f; font-weight: bold;">==</span> <span style="color: #5fafff;">0</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #5fafff;">print</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">paste</span><span style="color: #93a8c6;">(</span>no_arg, <span style="color: #87af5f;">"functions have no arguments"</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+
+<span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">Most of them seem to be primitive</span>
+<span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">sum(unlist(lapply(funs, function(x) length(formals(x)) == 0 &amp;&amp; is.primitive(x))))</span>
+</pre>
+</div>
+
+<pre class="example">
+225 functions have no arguments
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">2c</span>
+prim.funs <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">Filter</span><span style="color: #8c8c8c;">(</span>is.primitive,<span style="color: #5fafff;">Filter</span><span style="color: #93a8c6;">(</span>is.function, objs<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</div></li></ol>
+</div>
+
+<div id="outline-container-org4c52e29" class="outline-4">
+<h4 id="org4c52e29"><span class="section-number-4">1.1.3</span> What are the three important components of a function?</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">body</span>
+<span style="color: #5fafff;">body</span><span style="color: #8c8c8c;">()</span> <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">the code inside the function.</span>
+
+<span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">arguments</span>
+<span style="color: #5fafff;">formals</span><span style="color: #8c8c8c;">()</span> <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">the list of arguments which controls how you can call the function.</span>
+
+<span style="color: #707070; font-style: italic;">## </span><span style="color: #707070; font-style: italic;">enivronment</span>
+<span style="color: #5fafff;">environment</span><span style="color: #8c8c8c;">()</span> <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">the &#8220;map&#8221; of the location of the function&#8217;s variables.</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3769ce5" class="outline-4">
+<h4 id="org3769ce5"><span class="section-number-4">1.1.4</span> When does printing a function not show what environment it was created in?</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+E.g. primitive functions
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb541810" class="outline-2">
+<h2 id="orgb541810"><span class="section-number-2">2</span> Lexical scoping</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org5447c28" class="outline-3">
+<h3 id="org5447c28"><span class="section-number-3">2.1</span> What does the following code return? Why? What does each of the three c’s mean?</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-R">c <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">10</span>
+<span style="color: #5fafff;">c</span><span style="color: #8c8c8c;">(</span>c <span style="color: #d7875f; font-weight: bold;">=</span> c<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+10
+</pre>
+
+<ul class="org-ul">
+<li>c &lt;- 10 assign a variable</li>
+<li>c() combine function</li>
+<li>c = c assign a name to argument</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org78b4dba" class="outline-3">
+<h3 id="org78b4dba"><span class="section-number-3">2.2</span> What are the four principles that govern how R looks for values?</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><b>name masking</b> - within lexical scoping</li>
+<li><b>functions vs. variables</b> - parenthesis causes R to ignore variables</li>
+<li><b>a fresh start</b> - function environment is created on each call</li>
+<li><b>dynamic lookup</b> - lookup is done on evaluation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga3cb689" class="outline-3">
+<h3 id="orga3cb689"><span class="section-number-3">2.3</span> What does the following function return? Make a prediction before running the code yourself.</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">f</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>x<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  <span style="color: #5fafff;">f</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span> <span style="color: #93a8c6;">{</span>
+    <span style="color: #5fafff;">f</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #b0b1a3;">(</span>x<span style="color: #b0b1a3;">)</span> <span style="color: #b0b1a3;">{</span>
+      x ^ <span style="color: #5fafff;">2</span>
+    <span style="color: #b0b1a3;">}</span>
+    <span style="color: #5fafff;">f</span><span style="color: #b0b1a3;">(</span>x<span style="color: #b0b1a3;">)</span> <span style="color: #d7875f; font-weight: bold;">+</span> <span style="color: #5fafff;">1</span>
+  <span style="color: #93a8c6;">}</span>
+  <span style="color: #5fafff;">f</span><span style="color: #93a8c6;">(</span>x<span style="color: #93a8c6;">)</span> * <span style="color: #5fafff;">2</span>
+<span style="color: #8c8c8c;">}</span>
+<span style="color: #5fafff;">f</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">10</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+202
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b8acda" class="outline-2">
+<h2 id="org0b8acda"><span class="section-number-2">3</span> Every operation is a function call</h2>
+</div>
+<div id="outline-container-orge1d2786" class="outline-2">
+<h2 id="orge1d2786"><span class="section-number-2">4</span> Function arguments</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgd8d205c" class="outline-3">
+<h3 id="orgd8d205c"><span class="section-number-3">4.1</span> Clarify the following list of odd function calls:</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-R">x <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">sample</span><span style="color: #8c8c8c;">(</span>x <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">c</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">1</span>:<span style="color: #5fafff;">10</span>, <span style="color: #5fafff;">NA</span><span style="color: #93a8c6;">)</span>, size <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">20</span>, replace <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+y <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">runif</span><span style="color: #8c8c8c;">(</span>n <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">20</span>, min <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">0</span>, max <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">1</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #5fafff;">cor</span><span style="color: #8c8c8c;">(</span>x <span style="color: #d7875f; font-weight: bold;">=</span> x, y <span style="color: #d7875f; font-weight: bold;">=</span> y, use <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #87af5f;">"pairwise.complete.obs"</span>, method <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #87af5f;">"kendall"</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+0.157715624693436
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org369a8dc" class="outline-3">
+<h3 id="org369a8dc"><span class="section-number-3">4.2</span> What does this function return? Why? Which principle does it illustrate?</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">f1</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>x <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #93a8c6;">{</span>y <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">1</span>; <span style="color: #5fafff;">2</span><span style="color: #93a8c6;">}</span>, y <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">0</span><span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+    x <span style="color: #d7875f; font-weight: bold;">+</span> y
+<span style="color: #8c8c8c;">}</span>
+<span style="color: #5fafff;">f1</span><span style="color: #8c8c8c;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+3
+</pre>
+
+<ul class="org-ul">
+<li>Lazy evaluation. As the default value for x is evaluated so is
+y. The default value for the y argument will there for not be used.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org14bf399" class="outline-3">
+<h3 id="org14bf399"><span class="section-number-3">4.3</span> What does this function return? Why? Which principle does it illustrate?</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">f2</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>x <span style="color: #d7875f; font-weight: bold;">=</span> z<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  z <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">100</span>
+  x
+<span style="color: #8c8c8c;">}</span>
+<span style="color: #5fafff;">f2</span><span style="color: #8c8c8c;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+100
+</pre>
+<ul class="org-ul">
+<li>That default arguments can be defined in terms of variables created within the function.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d9bcd2" class="outline-2">
+<h2 id="org8d9bcd2"><span class="section-number-2">5</span> Special calls</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-orgc7cc1a1" class="outline-3">
+<h3 id="orgc7cc1a1"><span class="section-number-3">5.1</span> Create a list of all the replacement functions found in the base package. Which ones are primitive functions?</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Replacement functions have special names xxx&lt;-</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-R">objs <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">mget</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">ls</span><span style="color: #93a8c6;">(</span><span style="color: #87af5f;">"package:base"</span><span style="color: #93a8c6;">)</span>, inherits <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+funs <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">Filter</span><span style="color: #8c8c8c;">(</span>is.function, objs<span style="color: #8c8c8c;">)</span>
+funs_name <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">names</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">unlist</span><span style="color: #93a8c6;">(</span>funs<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #5fafff;">grep</span><span style="color: #8c8c8c;">(</span><span style="color: #87af5f;">".&lt;-$"</span>,funs_name, value <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&lt;&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">[&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">[[&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">@&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">$&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">attr&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">attributes&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">body&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">class&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">colnames&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">comment&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">diag&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">dim&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">dimnames&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">Encoding&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">environment&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">formals&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">is.na&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">length&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">levels&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">mode&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">mostattributes&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">names&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">oldClass&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">parent.env&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">regmatches&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">row.names&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">rownames&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">split&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">storage.mode&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">substr&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">substring&lt;-</td>
+</tr>
+
+<tr>
+<td class="org-left">units&lt;-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org89ddb8f" class="outline-3">
+<h3 id="org89ddb8f"><span class="section-number-3">5.2</span> What are valid names for user-created infix functions?</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+All user-created infix functions must start and end with %. The names
+of infix functions are more flexible than regular R functions: they
+can contain any sequence of characters (except “%”, of course).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93b88c4" class="outline-3">
+<h3 id="org93b88c4"><span class="section-number-3">5.3</span> Create an infix <code>xor()</code> operator.</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">`%xor%`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>a, b<span style="color: #8c8c8c;">)</span>  !a &amp; b | a &amp; !b <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">xor(a, b)</span>
+
+a <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">as.logical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">rbinom</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">50</span>, <span style="color: #5fafff;">1</span>, <span style="color: #5fafff;">0.5</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+b <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">as.logical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">rbinom</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">50</span>, <span style="color: #5fafff;">1</span>, <span style="color: #5fafff;">0.5</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+
+<span style="color: #5fafff;">identical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">xor</span><span style="color: #93a8c6;">(</span>a, b<span style="color: #93a8c6;">)</span>, a <span style="color: #d7875f; font-weight: bold;">%xor%</span> b<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+TRUE
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgaa40cf1" class="outline-3">
+<h3 id="orgaa40cf1"><span class="section-number-3">5.4</span> Create infix versions of the set functions <code>intersect()</code>, <code>union()</code>, and <code>setdiff()</code>.</h3>
+<div class="outline-text-3" id="text-5-4">
+<div class="org-src-container">
+<pre class="src src-R">v1 <span style="color: #d7875f; font-weight: bold;">&lt;-</span> letters<span style="color: #8c8c8c;">[</span><span style="color: #5fafff;">1</span>:<span style="color: #5fafff;">5</span><span style="color: #8c8c8c;">]</span>
+v2 <span style="color: #d7875f; font-weight: bold;">&lt;-</span> letters<span style="color: #8c8c8c;">[</span><span style="color: #5fafff;">4</span>:<span style="color: #5fafff;">8</span><span style="color: #8c8c8c;">]</span>
+
+<span style="color: #5fafff;">`%U%`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>a, b<span style="color: #8c8c8c;">)</span> <span style="color: #5fafff;">unique</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">c</span><span style="color: #93a8c6;">(</span>a, b<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+<span style="color: #5fafff;">identical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">union</span><span style="color: #93a8c6;">(</span>v1, v2<span style="color: #93a8c6;">)</span>, v1 <span style="color: #d7875f; font-weight: bold;">%U%</span> v2<span style="color: #8c8c8c;">)</span>
+
+<span style="color: #5fafff;">`%&#8745;%`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>a, b<span style="color: #8c8c8c;">)</span> b<span style="color: #8c8c8c;">[</span><span style="color: #5fafff;">match</span><span style="color: #93a8c6;">(</span>a, b, <span style="color: #5fafff;">0L</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">]</span>
+<span style="color: #5fafff;">identical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">intersect</span><span style="color: #93a8c6;">(</span>v1, v2<span style="color: #93a8c6;">)</span>, v1 <span style="color: #d7875f; font-weight: bold;">%&#8745;%</span> v2<span style="color: #8c8c8c;">)</span>
+
+<span style="color: #5fafff;">`%\\%`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>a, b<span style="color: #8c8c8c;">)</span> a<span style="color: #8c8c8c;">[</span>!<span style="color: #5fafff;">match</span><span style="color: #93a8c6;">(</span>a, b, <span style="color: #5fafff;">0L</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">]</span>
+<span style="color: #5fafff;">identical</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">setdiff</span><span style="color: #93a8c6;">(</span>v1, v2<span style="color: #93a8c6;">)</span>, v1 <span style="color: #d7875f; font-weight: bold;">%\% v2)</span>
+</pre>
+</div>
+
+<pre class="example">
+TRUE
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org7abd9ad" class="outline-3">
+<h3 id="org7abd9ad"><span class="section-number-3">5.5</span> Create a replacement function that modifies a random location in a vector.</h3>
+<div class="outline-text-3" id="text-5-5">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">`rReplace&lt;-`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>x, value<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  x<span style="color: #93a8c6;">[</span><span style="color: #5fafff;">sample</span><span style="color: #b0b1a3;">(</span>x, <span style="color: #5fafff;">1</span><span style="color: #b0b1a3;">)</span><span style="color: #93a8c6;">]</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> value
+  x
+<span style="color: #8c8c8c;">}</span>
+x <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">1</span>:<span style="color: #5fafff;">10</span>
+<span style="color: #5fafff;">rReplace</span><span style="color: #8c8c8c;">(</span>x<span style="color: #8c8c8c;">)</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">42</span>
+</pre>
+</div>
+
+<pre class="example">
+42
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeed91d8" class="outline-2">
+<h2 id="orgeed91d8"><span class="section-number-2">6</span> Return values</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-org4a43537" class="outline-3">
+<h3 id="org4a43537"><span class="section-number-3">6.1</span> How does the chdir parameter of <code>source()</code> compare to <code>in_dir()</code>? Why might you prefer one approach to the other?</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+The <code>chdir</code> argument in <code>source()</code> uses <code>add = TRUE</code>, i.e. adds to previous
+<code>on.exit()</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0c1d97b" class="outline-3">
+<h3 id="org0c1d97b"><span class="section-number-3">6.2</span> What function undoes the action of <code>library()</code>? How do you save and restore the values of <code>options()</code> and <code>par()</code>?</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #d7875f; font-weight: bold;">library</span><span style="color: #8c8c8c;">(</span>ggplot2<span style="color: #8c8c8c;">)</span>
+<span style="color: #d7875f; font-weight: bold;">detach</span><span style="color: #8c8c8c;">(</span><span style="color: #87af5f;">"package:ggplot2"</span>, unload<span style="color: #d7875f; font-weight: bold;">=</span><span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+
+op <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">options</span><span style="color: #8c8c8c;">()</span>
+<span style="color: #5fafff;">options</span><span style="color: #8c8c8c;">(</span>op<span style="color: #8c8c8c;">)</span>     <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">reset (all) initial options</span>
+
+old.par <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">par</span><span style="color: #8c8c8c;">(</span>no.readonly <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span> <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">all par settings which</span>
+                                        <span style="color: #707070; font-style: italic;"># </span><span style="color: #707070; font-style: italic;">could be changed.</span>
+<span style="color: #5fafff;">par</span><span style="color: #8c8c8c;">(</span>old.par<span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga0a9b2d" class="outline-3">
+<h3 id="orga0a9b2d"><span class="section-number-3">6.3</span> Write a function that opens a graphics device, runs the supplied code, and closes the graphics device (always, regardless of whether or not the plotting code worked).</h3>
+<div class="outline-text-3" id="text-6-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">myplot</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>code<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+    <span style="color: #5fafff;">dev.new</span><span style="color: #93a8c6;">()</span>
+    <span style="color: #5fafff;">on.exit</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">dev.off</span><span style="color: #b0b1a3;">()</span><span style="color: #93a8c6;">)</span>
+    <span style="color: #5fafff;">force</span><span style="color: #93a8c6;">(</span>code<span style="color: #93a8c6;">)</span>
+<span style="color: #8c8c8c;">}</span>
+
+<span style="color: #5fafff;">myplot</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">plot</span><span style="color: #93a8c6;">(</span>rnorm<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c3a746" class="outline-3">
+<h3 id="org5c3a746"><span class="section-number-3">6.4</span> We can use <code>on.exit()</code> to implement a simple version of <code>capture.output()</code>.</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+By closing/removing the file in a <code>on.exit( add = TRUE)</code> much of logic
+for when to close the file appears to have been reduced.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org41a396a" class="outline-2">
+<h2 id="org41a396a"><span class="section-number-2">7</span> Quiz</h2>
+<div class="outline-text-2" id="text-7">
+</div><div id="outline-container-org8072c53" class="outline-3">
+<h3 id="org8072c53"><span class="section-number-3">7.1</span> What are the three components of a function?</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>body</li>
+<li>arguments (compare function signature)</li>
+<li>environment</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7a9fc35" class="outline-3">
+<h3 id="org7a9fc35"><span class="section-number-3">7.2</span> What does the following code return?</h3>
+<div class="outline-text-3" id="text-7-2">
+<div class="org-src-container">
+<pre class="src src-R">x <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #5fafff;">10</span>
+<span style="color: #5fafff;">f1</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>x<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+    <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #93a8c6;">()</span> <span style="color: #93a8c6;">{</span>
+        x <span style="color: #d7875f; font-weight: bold;">+</span> <span style="color: #5fafff;">10</span>
+    <span style="color: #93a8c6;">}</span>
+<span style="color: #8c8c8c;">}</span>
+<span style="color: #5fafff;">f1</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">1</span><span style="color: #8c8c8c;">)()</span>
+</pre>
+</div>
+
+<pre class="example">
+11
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgdbf1c33" class="outline-3">
+<h3 id="orgdbf1c33"><span class="section-number-3">7.3</span> How would you more typically write this code?</h3>
+<div class="outline-text-3" id="text-7-3">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">`+`</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">1</span>, <span style="color: #5fafff;">`*`</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">2</span>, <span style="color: #5fafff;">3</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+7
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">1</span> <span style="color: #d7875f; font-weight: bold;">+</span> <span style="color: #93a8c6;">(</span><span style="color: #5fafff;">2</span> * <span style="color: #5fafff;">3</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+7
+</pre>
+
+<ul class="org-ul">
+<li>Compare with lisp:</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #8c8c8c;">(</span>+ 1 0 <span style="color: #93a8c6;">(</span>* 2 3 1 1 1<span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+7
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org6a3e4a9" class="outline-3">
+<h3 id="org6a3e4a9"><span class="section-number-3">7.4</span> How could you make this call easier to read?</h3>
+<div class="outline-text-3" id="text-7-4">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">mean</span><span style="color: #8c8c8c;">(</span>, <span style="color: #5fafff;">TRUE</span>, x <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">c</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">1</span>:<span style="color: #5fafff;">10</span>, <span style="color: #5fafff;">NA</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+5.5
+</pre>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">mean</span><span style="color: #8c8c8c;">(</span>x <span style="color: #d7875f; font-weight: bold;">=</span> <span style="color: #5fafff;">c</span><span style="color: #93a8c6;">(</span><span style="color: #5fafff;">1</span>:<span style="color: #5fafff;">10</span>, <span style="color: #5fafff;">NA</span><span style="color: #93a8c6;">)</span>, na.rm<span style="color: #d7875f; font-weight: bold;">=</span><span style="color: #5fafff;">TRUE</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+5.5
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org646bc35" class="outline-3">
+<h3 id="org646bc35"><span class="section-number-3">7.5</span> Does the following function throw an error when called? Why/why not?</h3>
+<div class="outline-text-3" id="text-7-5">
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">f2</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span><span style="color: #8c8c8c;">(</span>a, b<span style="color: #8c8c8c;">)</span> <span style="color: #8c8c8c;">{</span>
+  a * <span style="color: #5fafff;">10</span>
+<span style="color: #8c8c8c;">}</span>
+<span style="color: #5fafff;">f2</span><span style="color: #8c8c8c;">(</span><span style="color: #5fafff;">10</span>, <span style="color: #d787d7; font-weight: bold;">stop</span><span style="color: #93a8c6;">(</span><span style="color: #87af5f;">"This is an error!"</span><span style="color: #93a8c6;">)</span><span style="color: #8c8c8c;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+100
+</pre>
+
+<ul class="org-ul">
+<li>Lazy evaluation (b is not used).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5e6d850" class="outline-3">
+<h3 id="org5e6d850"><span class="section-number-3">7.6</span> What is an infix function? How do you write it? What’s a replacement function? How do you write it?</h3>
+<div class="outline-text-3" id="text-7-6">
+<ul class="org-ul">
+<li>The function name comes in between its arguments. `%+%` &lt;- function</li>
+
+<li>Replacement functions act like they modify their arguments in
+place, and have the special name xxx&lt;-.</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #5fafff;">`xxx&lt;-`</span> <span style="color: #d7875f; font-weight: bold;">&lt;-</span> <span style="color: #d787d7; font-weight: bold;">function</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdf2e374" class="outline-3">
+<h3 id="orgdf2e374"><span class="section-number-3">7.7</span> What function do you use to ensure that a cleanup action occurs regardless of how a function terminates?</h3>
+<div class="outline-text-3" id="text-7-7">
+<ul class="org-ul">
+<li>on.exit()</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Andreas Karlsson</p>
+<p class="date">Created: 2017-02-23 tor 15:28</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

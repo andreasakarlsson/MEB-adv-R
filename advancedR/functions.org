@@ -1,9 +1,10 @@
 #+STARTUP: overview
 #+STARTUP: hideblocks
 #+OPTIONS: toc:nil
+#+PROPERTY: header-args :exports both
 * Function components
 ** Primitive functions
-*** Exercise 1
+*** What function allows you to tell if an object is a function? What function allows you to tell if a function is a primitive function?
 #+BEGIN_SRC R
   is.primitive(sum)
 #+END_SRC
@@ -14,28 +15,42 @@
 + Side note:
   https://cran.r-project.org/doc/manuals/r-release/R-ints.html#g_t_002eInternal-vs-_002ePrimitive
 
-*** Exercise 2
-#+BEGIN_SRC R :include.rownames true
+*** This code makes a list of all functions in the base package.
+#+BEGIN_SRC R :include.rownames true :session *myR*
   objs <- mget(ls("package:base"), inherits = TRUE)
   funs <- Filter(is.function, objs)
+#+END_SRC
 
+**** Which base function has the most arguments?
+
+**** How many base functions have no arguments? What’s special about those functions?
+
+**** How could you adapt the code to find all primitive functions?
+
+#+BEGIN_SRC R :include.rownames true :session *myR*
   ## 2a
   n_args <- lapply(funs, function(x) length(formals(x)))
   max_arg <- n_args[which.max(unlist(n_args))]
   print(paste(names(max_arg), "has", max_arg, "arguments"))
+#+END_SRC
 
+#+BEGIN_SRC R :include.rownames true :session *myR*
   ## 2b
   no_arg <- sum(unlist(lapply(n_args, function(x) x == 0)))
   print(paste(no_arg, "functions have no arguments"))
 
-  ## They all seem to be primitive
-  sum(unlist(lapply(funs, function(x) length(formals(x)) == 0 && is.primitive(x))))
+  ## Most of them seem to be primitive
+  ## sum(unlist(lapply(funs, function(x) length(formals(x)) == 0 && is.primitive(x))))
+#+END_SRC
 
+#+BEGIN_SRC R :include.rownames true :session *myR*
   ## 2c
   prim.funs <- Filter(is.primitive,Filter(is.function, objs))
 #+END_SRC
 
-*** Exercise 3
+#+RESULTS:
+
+*** What are the three important components of a function?
 #+BEGIN_SRC R
   ## body
   body() # the code inside the function.
@@ -47,16 +62,14 @@
   environment() # the “map” of the location of the function’s variables.
 #+END_SRC
 
-*** Exercise 4
+*** When does printing a function not show what environment it was created in?
  E.g. primitive functions
 
 * Lexical scoping
-** Exercise 1
+** What does the following code return? Why? What does each of the three c’s mean?
 #+BEGIN_SRC R
-
   c <- 10
   c(c = c)
-
 #+END_SRC
 
 #+RESULTS:
@@ -66,13 +79,13 @@
 + c() combine function
 + c = c assign a name to argument
 
-** Exercise 2
+** What are the four principles that govern how R looks for values?
 + *name masking* - within lexical scoping
 + *functions vs. variables* - parenthesis causes R to ignore variables
 + *a fresh start* - function environment is created on each call
 + *dynamic lookup* - lookup is done on evaluation
 
-** Exercise 3
+** What does the following function return? Make a prediction before running the code yourself.
 #+BEGIN_SRC R
   f <- function(x) {
     f <- function(x) {
@@ -90,15 +103,14 @@
 : 202
 * Every operation is a function call
 * Function arguments
-** Exercise 1
+** Clarify the following list of odd function calls:
 #+BEGIN_SRC R
   x <- sample(x = c(1:10, NA), size = 20, replace = TRUE)
   y <- runif(n = 20, min = 0, max = 1)
   cor(x = x, y = y, use = "pairwise.complete.obs", method = "kendall")
 #+END_SRC
 
-
-** Exercise 2
+** What does this function return? Why? Which principle does it illustrate?
 #+BEGIN_SRC R
   f1 <- function(x = {y <- 1; 2}, y = 0) {
       x + y
@@ -112,7 +124,7 @@
 + Lazy evaluation. As the default value for x is evaluated so is
   y. The default value for the y argument will there for not be used.
 
-** Exercise 3
+** What does this function return? Why? Which principle does it illustrate?
 #+BEGIN_SRC R
   f2 <- function(x = z) {
     z <- 100
@@ -126,13 +138,13 @@
 + That default arguments can be defined in terms of variables created within the function.
 
 * Special calls
-** Exercise 1
+** Create a list of all the replacement functions found in the base package. Which ones are primitive functions?
 + Replacement functions have special names xxx<-
 #+BEGIN_SRC R
   objs <- mget(ls("package:base"), inherits = TRUE)
   funs <- Filter(is.function, objs)
   funs_name <- names(unlist(funs))
-  funs_name[grep(".<-$",funs_name)]
+  grep(".<-$",funs_name, value = TRUE)
 #+END_SRC
 
 #+RESULTS:
@@ -170,14 +182,13 @@
 | substring<-      |
 | units<-          |
 
-
-** Exercise 2
+** What are valid names for user-created infix functions?
 
 All user-created infix functions must start and end with %. The names
 of infix functions are more flexible than regular R functions: they
 can contain any sequence of characters (except “%”, of course).
 
-** Exercise 3
+** Create an infix =xor()= operator.
 #+BEGIN_SRC R
   `%xor%` <- function(a, b)  !a & b | a & !b # xor(a, b)
 
@@ -187,8 +198,10 @@ can contain any sequence of characters (except “%”, of course).
   identical(xor(a, b), a %xor% b)
 #+END_SRC
 
+#+RESULTS:
+: TRUE
 
-** Exercise 4
+** Create infix versions of the set functions =intersect()=, =union()=, and =setdiff()=.
 #+BEGIN_SRC R
   v1 <- letters[1:5]
   v2 <- letters[4:8]
@@ -201,30 +214,23 @@ can contain any sequence of characters (except “%”, of course).
 
   `%\\%` <- function(a, b) a[!match(a, b, 0L)]
   identical(setdiff(v1, v2), v1 %\% v2)
-
 #+END_SRC
-
-
-** Exercise 5
+** Create a replacement function that modifies a random location in a vector.
 #+BEGIN_SRC R
   `rReplace<-` <- function(x, value) {
-    index <- max(1, floor(runif(1) * length(x)))
-    x[index] <- value
+    x[sample(x, 1)] <- value
     x
   }
   x <- 1:10
   rReplace(x) <- 42
 #+END_SRC
 
-
-
 * Return values
+** How does the chdir parameter of =source()= compare to =in_dir()=? Why might you prefer one approach to the other?
+The =chdir= argument in =source()= uses =add = TRUE=, i.e. adds to previous
+=on.exit()=.
 
-** Exercise 1
-The chdir argument in source() uses add = TRUE, i.e. adds to previous
-on.exit()
-
-** Exercise 2
+** What function undoes the action of =library()=? How do you save and restore the values of =options()= and =par()=?
 
 #+BEGIN_SRC R
   library(ggplot2)
@@ -238,8 +244,9 @@ on.exit()
   par(old.par)
 #+END_SRC
 
-** Exercise 3
-#+BEGIN_SRC R
+** Write a function that opens a graphics device, runs the supplied code, and closes the graphics device (always, regardless of whether or not the plotting code worked).
+
+#+BEGIN_SRC R :exports code
   myplot <- function(code) {
       dev.new()
       on.exit(dev.off())
@@ -249,32 +256,31 @@ on.exit()
   myplot(plot(rnorm))
 #+END_SRC
 
-** Exercise 4
-By closing/removing the file in a on.exit( add = TRUE) much of logic
+** We can use =on.exit()= to implement a simple version of =capture.output()=.
+By closing/removing the file in a =on.exit( add = TRUE)= much of logic
 for when to close the file appears to have been reduced.
 
 * Quiz
-1. What are the three components of a function?
+** What are the three components of a function?
    + body
    + arguments (compare function signature)
    + environment
 
-2. What does the following code return?
+** What does the following code return?
+   #+BEGIN_SRC R
+     x <- 10
+     f1 <- function(x) {
+         function() {
+             x + 10
+         }
+     }
+     f1(1)()
+   #+END_SRC
 
-#+BEGIN_SRC R
-  x <- 10
-  f1 <- function(x) {
-    function() {
-      x + 10
-    }
-  }
-  f1(1)()
-#+END_SRC
+   #+RESULTS:
+   : 11
 
-#+RESULTS:
-: 11
-
-3. How would you more typically write this code?
+** How would you more typically write this code?
 
 #+BEGIN_SRC R
   `+`(1, `*`(2, 3))
@@ -283,14 +289,6 @@ for when to close the file appears to have been reduced.
 #+RESULTS:
 : 7
 
-#+BEGIN_SRC elisp
-  (+ 1 (* 2  3))
-#+END_SRC
-
-#+RESULTS:
-: 7
-
-
 #+BEGIN_SRC R
   (1 + (2 * 3))
 #+END_SRC
@@ -298,7 +296,16 @@ for when to close the file appears to have been reduced.
 #+RESULTS:
 : 7
 
-4. How could you make this call easier to read?
++ Compare with lisp:
+#+BEGIN_SRC elisp
+  (+ 1 0 (* 2 3 1 1 1))
+#+END_SRC
+
+#+RESULTS:
+: 7
+
+
+** How could you make this call easier to read?
 
 
 #+BEGIN_SRC R
@@ -316,8 +323,7 @@ for when to close the file appears to have been reduced.
 : 5.5
 
 
-5. Does the following function throw an error when called? Why/why
-   not?
+** Does the following function throw an error when called? Why/why not?
 
 #+BEGIN_SRC R
   f2 <- function(a, b) {
@@ -331,21 +337,18 @@ for when to close the file appears to have been reduced.
 
    + Lazy evaluation (b is not used).
 
-6. What is an infix function? How do you write it? What’s a
-   replacement function? How do you write it?
+** What is an infix function? How do you write it? What’s a replacement function? How do you write it?
 
    + The function name comes in between its arguments. `%+%` <- function
 
    + Replacement functions act like they modify their arguments in
-     place, and have the special name xxx<-. `xxx<-` <- function
-
-7. What function do you use to ensure that a cleanup action occurs
-   regardless of how a function terminates?
-   + on.exit()
-
-#+BEGIN_SRC R
-  require(pryr)
+     place, and have the special name xxx<-.
+#+BEGIN_SRC R :exports code :eval never
+  `xxx<-` <- function
 #+END_SRC
+
+** What function do you use to ensure that a cleanup action occurs regardless of how a function terminates?
+   + on.exit()
 
 # Local Variables:
 # org-confirm-babel-evaluate: nil

@@ -27,7 +27,18 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - OO field guide                         :all:
+** TODO Reading: *Advanced R* - Environments                         :all:
+<2017-04-27 tor 10:30-11:30>
++ Read & do the exercises in the *Environments* chapter before the meeting.
+
++ The material is available here:
+  + http://adv-r.had.co.nz/Environments.html
+
++ We will draw parallels between the Environments chapter and the
+  [[http://adv-r.had.co.nz/OO-essentials.html#rc][reference classes from the OO chapter]].
+
++ Location: Wargentin
+** DONE Reading: *Advanced R* - OO field guide                         :all:
 <2017-03-30 tor 10:30-11:30>
 + Read & do the exercises in the *OO field guide* chapter before the meeting.
 

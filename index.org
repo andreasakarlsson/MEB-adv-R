@@ -27,7 +27,7 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - Environments                         :all:
+** TODO Reading: *Advanced R* - Environments                         :All:Alex:
 <2017-04-27 tor 10:30-11:30>
 + Read & do the exercises in the *Environments* chapter before the meeting.
 
@@ -37,8 +37,9 @@
 + We will draw parallels between the Environments chapter and the
   [[http://adv-r.had.co.nz/OO-essentials.html#rc][reference classes from the OO chapter]].
 
++ At the helm: Alex
 + Location: Wargentin
-** DONE Reading: *Advanced R* - OO field guide                         :all:
+** DONE Reading: *Advanced R* - OO field guide                         :All:
 <2017-03-30 tor 10:30-11:30>
 + Read & do the exercises in the *OO field guide* chapter before the meeting.
 
@@ -49,7 +50,7 @@
   previous meeting.
 
 + Location: Wargentin
-** DONE Reading: *Advanced R* - vocabulary, style and functions        :all:
+** DONE Reading: *Advanced R* - vocabulary, style and functions        :All:Andreas:
 <2017-02-23 tor 10:30-11:30>
 + Read & do the exercises in the *vocabulary*, *style* and *functions*
   chapters before the meeting.
@@ -67,13 +68,14 @@
 + Suggested solutions to the functions chapter are available here:
   [[file:advancedR/functions.html]]
 
++ At the helm: Andreas
 + Location: Wargentin
-** DONE Reading: *Advanced R* - subsetting                             :all:
+** DONE Reading: *Advanced R* - subsetting                             :All:
 <2016-06-21 Tue 13:00-14:00>
 + Reading group on: [[http://adv-r.had.co.nz/Subsetting.html]]
 + Read & do exercises of *subsetting* chapter before meeting
 + Location: N2
-** DONE Reading: *Advanced R* - data structures                        :all:
+** DONE Reading: *Advanced R* - data structures                        :All:
 <2016-05-31 Tue 09:00-11:00>
 + Reading group on: [[http://adv-r.had.co.nz/Introduction.html]] by Hadley Wickham
 + Read & do exercises of +foundations+ *data structures* chapter before meeting

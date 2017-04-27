@@ -27,7 +27,16 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - Environments                         :All:Alex:
+** TODO Reading: *Advanced R* - Debugging, condition handling, and defensive programming :All:someone:
+<2017-06-08 tor 10:30-11:30>
++ Read & do the exercises in the *Exceptions and debugging* chapter before the meeting.
+
++ The material is available here:
+  + http://adv-r.had.co.nz/Exceptions-Debugging.html
+
++ At the helm: ?
++ Location: Wargentin
+** DONE Reading: *Advanced R* - Environments                      :All:Alex:
 <2017-04-27 tor 10:30-11:30>
 + Read & do the exercises in the *Environments* chapter before the meeting.
 
@@ -37,6 +46,8 @@
 + We will draw parallels between the Environments chapter and the
   [[http://adv-r.had.co.nz/OO-essentials.html#rc][reference classes from the OO chapter]].
 
++ Suggested solutions to the Environment chapter are available here:
+  [[file:advancedR/Renvironments_notes.html][Notes on Environments]]
 + At the helm: Alex
 + Location: Wargentin
 ** DONE Reading: *Advanced R* - OO field guide                         :All:
@@ -66,8 +77,7 @@
   cup of coffee).
 
 + Suggested solutions to the functions chapter are available here:
-  [[file:advancedR/functions.html]]
-
+  [[file:advancedR/functions.html][Notes on functions]]
 + At the helm: Andreas
 + Location: Wargentin
 ** DONE Reading: *Advanced R* - subsetting                             :All:

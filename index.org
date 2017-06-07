@@ -27,14 +27,14 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - Debugging, condition handling, and defensive programming :All:someone:
+** TODO Reading: *Advanced R* - Debugging, condition handling, and defensive programming :All:Johan:
 <2017-06-08 tor 10:30-11:30>
 + Read & do the exercises in the *Exceptions and debugging* chapter before the meeting.
 
 + The material is available here:
   + http://adv-r.had.co.nz/Exceptions-Debugging.html
 
-+ At the helm: ?
++ At the helm: Johan
 + Location: Wargentin
 ** DONE Reading: *Advanced R* - Environments                      :All:Alex:
 <2017-04-27 tor 10:30-11:30>

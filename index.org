@@ -27,7 +27,24 @@
 #+LANGUAGE:  en
 
 * Meetings & presentations
-** TODO Reading: *Advanced R* - Debugging, condition handling, and defensive programming :All:Johan:
+# ** Reading: *Advanced R* - Functional programming      :All:Alex:TBD:
+# <2017-08-31 tor 10:30-11:30>
+# + Read & do the exercises for the second *Functional programming* + TBD chapters before the meeting.
+
+# + The material is available here:
+#   + Alex :: http://adv-r.had.co.nz/Functionals.html
+
+** TODO Reading: *Advanced R* - Functional programming :All:Mark:Peter:
+<2017-09-28 tor 10:30-11:30>
++ Read & do the exercises for the 1^{st} and 3^{rd} *Functional programming* chapters before the meeting.
+
++ The material is available here:
+  + http://adv-r.had.co.nz/Functional-programming.html
+  + http://adv-r.had.co.nz/Function-operators.html
+
++ At the helm: Peter & Mark
++ Location: Wargentin
+** DONE Reading: *Advanced R* - Debugging, condition handling, and defensive programming :All:Johan:
 <2017-06-08 tor 10:30-11:30>
 + Read & do the exercises in the *Exceptions and debugging* chapter before the meeting.
 

@@ -34,7 +34,19 @@
 # + The material is available here:
 #   + Alex :: http://adv-r.had.co.nz/Functionals.html
 
-** TODO Reading: *Advanced R* - Functional programming :All:Mark:Peter:
+** TODO Reading: *Advanced R* - Functionals and Non-standard evaluation   :All:Alex:
+<2017-10-12 tor 10:30-11:30>
++ Read & do the exercises for the *Functionals* and *Non-standard evaluation*
+  chapters before the meeting. There will be an emphasis on the first chapter
+  during our meeting.
+
++ The material is available here:
+  + Functionals :: http://adv-r.had.co.nz/Functionals.html
+  + Non-standard evaluation :: http://adv-r.had.co.nz/Computing-on-the-language.html
+
++ At the helm: Alex
++ Location: Wargentin
+** DONE Reading: *Advanced R* - Functional programming      :All:Mark:Peter:
 <2017-09-28 tor 10:30-11:30>
 + Read & do the exercises for the 1^{st} and 3^{rd} *Functional programming* chapters before the meeting.
 
